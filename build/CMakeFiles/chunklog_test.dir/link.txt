@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/chunklog_test.dir/util/testharness.cc.o CMakeFiles/chunklog_test.dir/util/testutil.cc.o CMakeFiles/chunklog_test.dir/db/chunklog_test.cc.o  -o chunklog_test libleveldb.a -lhoard -lnuma -lpthread 

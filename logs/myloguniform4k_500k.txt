@@ -1,0 +1,1899 @@
+write_buffer_size:33554432, chunk_index_size:14680064, chunk_log_size:58720256
+ref, refs:1
+to handle job
+before impl::recover
+to handle job
+to handle job
+dbname:/mnt/ssd/dbbench,lock:/mnt/ssd/dbbench/LOCK
+to handle job
+before VersionSet->recover
+after MarkFileNumberUsed, s.ok()
+after VersionSet->recover
+after recovery, chunkmetafile:0
+after recover metadata
+---------printChunkFileNumbers--------
+chunk0: index number:0, log number:0
+chunk1: index number:0, log number:0
+chunk2: index number:0, log number:0
+chunk3: index number:0, log number:0
+chunk4: index number:0, log number:0
+chunk5: index number:0, log number:0
+chunk6: index number:0, log number:0
+chunk7: index number:0, log number:0
+---------printChunkFileNumbers--------
+after impl::recover
+before env->NewWritableFile
+after env->NewWritableFile
+edit add metafile:20
+logandapply, chunkindex_filenumber:4, chunkLogFilenumber:5
+logandapply, chunkindex_filenumber:6, chunkLogFilenumber:7
+logandapply, chunkindex_filenumber:8, chunkLogFilenumber:9
+logandapply, chunkindex_filenumber:10, chunkLogFilenumber:11
+logandapply, chunkindex_filenumber:12, chunkLogFilenumber:13
+logandapply, chunkindex_filenumber:14, chunkLogFilenumber:15
+logandapply, chunkindex_filenumber:16, chunkLogFilenumber:17
+logandapply, chunkindex_filenumber:18, chunkLogFilenumber:19
+before delete nvmtbl_
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:132, logUsage:0, numofEntries:0
+index:1, indexUsage:132, logUsage:0, numofEntries:0
+index:2, indexUsage:132, logUsage:0, numofEntries:0
+index:3, indexUsage:132, logUsage:0, numofEntries:0
+index:4, indexUsage:132, logUsage:0, numofEntries:0
+index:5, indexUsage:132, logUsage:0, numofEntries:0
+index:6, indexUsage:132, logUsage:0, numofEntries:0
+index:7, indexUsage:132, logUsage:0, numofEntries:0
+-------------END PRINT_NVMTABLE-----------------
+save metafile:/mnt/pmemdir/dbbench/000020.met
+unref, refs:0
+after handle job
+after handle job
+after handle job
+after handle job
+write_buffer_size:33554432, chunk_index_size:14680064, chunk_log_size:58720256
+ref, refs:1
+to handle job
+to handle job
+to handle job
+before impl::recover
+dbname:/mnt/ssd/dbbench,lock:/mnt/ssd/dbbench/LOCK
+to handle job
+before VersionSet->recover
+after MarkFileNumberUsed, s.ok()
+after VersionSet->recover
+after recovery, chunkmetafile:0
+after recover metadata
+---------printChunkFileNumbers--------
+chunk0: index number:0, log number:0
+chunk1: index number:0, log number:0
+chunk2: index number:0, log number:0
+chunk3: index number:0, log number:0
+chunk4: index number:0, log number:0
+chunk5: index number:0, log number:0
+chunk6: index number:0, log number:0
+chunk7: index number:0, log number:0
+---------printChunkFileNumbers--------
+after impl::recover
+before env->NewWritableFile
+after env->NewWritableFile
+edit add metafile:20
+logandapply, chunkindex_filenumber:4, chunkLogFilenumber:5
+logandapply, chunkindex_filenumber:6, chunkLogFilenumber:7
+logandapply, chunkindex_filenumber:8, chunkLogFilenumber:9
+logandapply, chunkindex_filenumber:10, chunkLogFilenumber:11
+logandapply, chunkindex_filenumber:12, chunkLogFilenumber:13
+logandapply, chunkindex_filenumber:14, chunkLogFilenumber:15
+logandapply, chunkindex_filenumber:16, chunkLogFilenumber:17
+logandapply, chunkindex_filenumber:18, chunkLogFilenumber:19
+in MakeRoomForImmu, check
+after check
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:132, logUsage:0, numofEntries:0
+index:1, indexUsage:132, logUsage:0, numofEntries:0
+index:2, indexUsage:132, logUsage:0, numofEntries:0
+index:3, indexUsage:132, logUsage:0, numofEntries:0
+index:4, indexUsage:132, logUsage:0, numofEntries:0
+index:5, indexUsage:132, logUsage:0, numofEntries:0
+index:6, indexUsage:132, logUsage:0, numofEntries:0
+index:7, indexUsage:132, logUsage:0, numofEntries:0
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:14000, count:9000, drop_count:80, nvm_num:0, sst_num:8920
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:132, logUsage:0, numofEntries:0
+index:1, indexUsage:132, logUsage:0, numofEntries:0
+index:2, indexUsage:132, logUsage:0, numofEntries:0
+index:3, indexUsage:132, logUsage:0, numofEntries:0
+index:4, indexUsage:132, logUsage:0, numofEntries:0
+index:5, indexUsage:132, logUsage:0, numofEntries:0
+index:6, indexUsage:132, logUsage:0, numofEntries:0
+index:7, indexUsage:132, logUsage:0, numofEntries:0
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:23000, count:9000, drop_count:80, nvm_num:0, sst_num:8920
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:132, logUsage:0, numofEntries:0
+index:1, indexUsage:132, logUsage:0, numofEntries:0
+index:2, indexUsage:132, logUsage:0, numofEntries:0
+index:3, indexUsage:132, logUsage:0, numofEntries:0
+index:4, indexUsage:132, logUsage:0, numofEntries:0
+index:5, indexUsage:132, logUsage:0, numofEntries:0
+index:6, indexUsage:132, logUsage:0, numofEntries:0
+index:7, indexUsage:132, logUsage:0, numofEntries:0
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:31407, count:9000, drop_count:83, nvm_num:0, sst_num:8917
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1246856627817278035
+chuntable Add, user_key:user1246856627817278035, len:23
+before add to chunklog
+chunktable,add kvoffset：0x8
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:132, logUsage:0, numofEntries:0
+index:1, indexUsage:132, logUsage:0, numofEntries:0
+index:2, indexUsage:132, logUsage:0, numofEntries:0
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:132, logUsage:0, numofEntries:0
+index:5, indexUsage:132, logUsage:0, numofEntries:0
+index:6, indexUsage:132, logUsage:0, numofEntries:0
+index:7, indexUsage:132, logUsage:0, numofEntries:0
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:41000, count:9000, drop_count:78, nvm_num:1, sst_num:8921
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1186006647460095449
+chuntable Add, user_key:user1186006647460095449, len:23
+before add to chunklog
+chunktable,add kvoffset：0x8
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user1424059145348170394
+chuntable Add, user_key:user1424059145348170394, len:23
+before add to chunklog
+chunktable,add kvoffset：0x8
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user4675547397271298093
+chuntable Add, user_key:user4675547397271298093, len:23
+before add to chunklog
+chunktable,add kvoffset：0x8
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user8967917770890683473
+chuntable Add, user_key:user8967917770890683473, len:23
+before add to chunklog
+chunktable,add kvoffset：0x8
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:132, logUsage:0, numofEntries:0
+index:1, indexUsage:160, logUsage:4042, numofEntries:1
+index:2, indexUsage:132, logUsage:0, numofEntries:0
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:132, logUsage:0, numofEntries:0
+index:5, indexUsage:160, logUsage:4042, numofEntries:1
+index:6, indexUsage:160, logUsage:4042, numofEntries:1
+index:7, indexUsage:160, logUsage:4042, numofEntries:1
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:49000, count:9000, drop_count:82, nvm_num:4, sst_num:8914
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user8967917770890683473
+chuntable Add, user_key:user8967917770890683473, len:23
+before add to chunklog
+chunktable,add kvoffset：0xfca
+it's update
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:132, logUsage:0, numofEntries:0
+index:1, indexUsage:160, logUsage:4042, numofEntries:1
+index:2, indexUsage:132, logUsage:0, numofEntries:0
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:132, logUsage:0, numofEntries:0
+index:5, indexUsage:160, logUsage:8076, numofEntries:1
+index:6, indexUsage:160, logUsage:4042, numofEntries:1
+index:7, indexUsage:160, logUsage:4042, numofEntries:1
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:59000, count:9000, drop_count:79, nvm_num:1, sst_num:8920
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user5556885697430629501
+chuntable Add, user_key:user5556885697430629501, len:23
+before add to chunklog
+chunktable,add kvoffset：0x1f8c
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:132, logUsage:0, numofEntries:0
+index:1, indexUsage:160, logUsage:4042, numofEntries:1
+index:2, indexUsage:132, logUsage:0, numofEntries:0
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:132, logUsage:0, numofEntries:0
+index:5, indexUsage:176, logUsage:12110, numofEntries:2
+index:6, indexUsage:160, logUsage:4042, numofEntries:1
+index:7, indexUsage:160, logUsage:4042, numofEntries:1
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:68000, count:9000, drop_count:95, nvm_num:1, sst_num:8904
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user5556885697430629501
+chuntable Add, user_key:user5556885697430629501, len:23
+before add to chunklog
+chunktable,add kvoffset：0x2f4e
+it's update
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:132, logUsage:0, numofEntries:0
+index:1, indexUsage:160, logUsage:4042, numofEntries:1
+index:2, indexUsage:132, logUsage:0, numofEntries:0
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:132, logUsage:0, numofEntries:0
+index:5, indexUsage:176, logUsage:16144, numofEntries:2
+index:6, indexUsage:160, logUsage:4042, numofEntries:1
+index:7, indexUsage:160, logUsage:4042, numofEntries:1
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:77000, count:9000, drop_count:68, nvm_num:1, sst_num:8931
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user921641042944964170
+chuntable Add, user_key:user921641042944964170, len:22
+before add to chunklog
+chunktable,add kvoffset：0x8
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:132, logUsage:0, numofEntries:0
+index:1, indexUsage:160, logUsage:4042, numofEntries:1
+index:2, indexUsage:132, logUsage:0, numofEntries:0
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:160, logUsage:4041, numofEntries:1
+index:5, indexUsage:176, logUsage:16144, numofEntries:2
+index:6, indexUsage:160, logUsage:4042, numofEntries:1
+index:7, indexUsage:160, logUsage:4042, numofEntries:1
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:86000, count:9000, drop_count:94, nvm_num:1, sst_num:8905
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user5889913675222054881
+chuntable Add, user_key:user5889913675222054881, len:23
+before add to chunklog
+chunktable,add kvoffset：0x8
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user8842135124790086173
+chuntable Add, user_key:user8842135124790086173, len:23
+before add to chunklog
+chunktable,add kvoffset：0x8
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:160, logUsage:4042, numofEntries:1
+index:1, indexUsage:160, logUsage:4042, numofEntries:1
+index:2, indexUsage:160, logUsage:4042, numofEntries:1
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:160, logUsage:4041, numofEntries:1
+index:5, indexUsage:176, logUsage:16144, numofEntries:2
+index:6, indexUsage:160, logUsage:4042, numofEntries:1
+index:7, indexUsage:160, logUsage:4042, numofEntries:1
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:94181, count:9000, drop_count:88, nvm_num:2, sst_num:8910
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:160, logUsage:4042, numofEntries:1
+index:1, indexUsage:160, logUsage:4042, numofEntries:1
+index:2, indexUsage:160, logUsage:4042, numofEntries:1
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:160, logUsage:4041, numofEntries:1
+index:5, indexUsage:176, logUsage:16144, numofEntries:2
+index:6, indexUsage:160, logUsage:4042, numofEntries:1
+index:7, indexUsage:160, logUsage:4042, numofEntries:1
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:103000, count:9000, drop_count:83, nvm_num:0, sst_num:8917
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user4570760531421969256
+chuntable Add, user_key:user4570760531421969256, len:23
+before add to chunklog
+chunktable,add kvoffset：0xfca
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user6705172525143856558
+chuntable Add, user_key:user6705172525143856558, len:23
+before add to chunklog
+chunktable,add kvoffset：0xfca
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user981919852664370361
+chuntable Add, user_key:user981919852664370361, len:22
+before add to chunklog
+chunktable,add kvoffset：0x1f8c
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:176, logUsage:8076, numofEntries:2
+index:1, indexUsage:192, logUsage:12109, numofEntries:3
+index:2, indexUsage:160, logUsage:4042, numofEntries:1
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:160, logUsage:4041, numofEntries:1
+index:5, indexUsage:176, logUsage:16144, numofEntries:2
+index:6, indexUsage:160, logUsage:4042, numofEntries:1
+index:7, indexUsage:160, logUsage:4042, numofEntries:1
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:113000, count:9000, drop_count:79, nvm_num:3, sst_num:8918
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:176, logUsage:8076, numofEntries:2
+index:1, indexUsage:192, logUsage:12109, numofEntries:3
+index:2, indexUsage:160, logUsage:4042, numofEntries:1
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:160, logUsage:4041, numofEntries:1
+index:5, indexUsage:176, logUsage:16144, numofEntries:2
+index:6, indexUsage:160, logUsage:4042, numofEntries:1
+index:7, indexUsage:160, logUsage:4042, numofEntries:1
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:121000, count:9000, drop_count:66, nvm_num:0, sst_num:8934
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1729849103026575679
+chuntable Add, user_key:user1729849103026575679, len:23
+before add to chunklog
+chunktable,add kvoffset：0xfca
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user8218655275772568762
+chuntable Add, user_key:user8218655275772568762, len:23
+before add to chunklog
+chunktable,add kvoffset：0x3f10
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:176, logUsage:8076, numofEntries:2
+index:1, indexUsage:192, logUsage:12109, numofEntries:3
+index:2, indexUsage:160, logUsage:4042, numofEntries:1
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:160, logUsage:4041, numofEntries:1
+index:5, indexUsage:192, logUsage:20178, numofEntries:3
+index:6, indexUsage:176, logUsage:8076, numofEntries:2
+index:7, indexUsage:160, logUsage:4042, numofEntries:1
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:130000, count:9000, drop_count:84, nvm_num:2, sst_num:8914
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1321947787326394753
+chuntable Add, user_key:user1321947787326394753, len:23
+before add to chunklog
+chunktable,add kvoffset：0xfca
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user378299860923848921
+chuntable Add, user_key:user378299860923848921, len:22
+before add to chunklog
+chunktable,add kvoffset：0x4ed2
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user8196072547379461203
+chuntable Add, user_key:user8196072547379461203, len:23
+before add to chunklog
+chunktable,add kvoffset：0x1f8c
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user9178477295548330385
+chuntable Add, user_key:user9178477295548330385, len:23
+before add to chunklog
+chunktable,add kvoffset：0x5e93
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:192, logUsage:12110, numofEntries:3
+index:1, indexUsage:192, logUsage:12109, numofEntries:3
+index:2, indexUsage:160, logUsage:4042, numofEntries:1
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:160, logUsage:4041, numofEntries:1
+index:5, indexUsage:224, logUsage:28245, numofEntries:5
+index:6, indexUsage:176, logUsage:8076, numofEntries:2
+index:7, indexUsage:176, logUsage:8076, numofEntries:2
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:139000, count:9000, drop_count:80, nvm_num:4, sst_num:8916
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1321947787326394753
+chuntable Add, user_key:user1321947787326394753, len:23
+before add to chunklog
+chunktable,add kvoffset：0x1f8c
+it's update
+after add to chunktable
+add to nvmtable, user_key:user8218655275772568762
+chuntable Add, user_key:user8218655275772568762, len:23
+before add to chunklog
+chunktable,add kvoffset：0x6e55
+it's update
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:192, logUsage:12110, numofEntries:3
+index:1, indexUsage:192, logUsage:12109, numofEntries:3
+index:2, indexUsage:160, logUsage:4042, numofEntries:1
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:160, logUsage:4041, numofEntries:1
+index:5, indexUsage:224, logUsage:32279, numofEntries:5
+index:6, indexUsage:176, logUsage:8076, numofEntries:2
+index:7, indexUsage:176, logUsage:12110, numofEntries:2
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:147000, count:9000, drop_count:75, nvm_num:2, sst_num:8923
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1388774215486347568
+chuntable Add, user_key:user1388774215486347568, len:23
+before add to chunklog
+chunktable,add kvoffset：0x1f8c
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user3164761618945555718
+chuntable Add, user_key:user3164761618945555718, len:23
+before add to chunklog
+chunktable,add kvoffset：0x2f4e
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user3784003597544336812
+chuntable Add, user_key:user3784003597544336812, len:23
+before add to chunklog
+chunktable,add kvoffset：0xfc9
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:192, logUsage:12110, numofEntries:3
+index:1, indexUsage:192, logUsage:12109, numofEntries:3
+index:2, indexUsage:160, logUsage:4042, numofEntries:1
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:176, logUsage:8075, numofEntries:2
+index:5, indexUsage:224, logUsage:32279, numofEntries:5
+index:6, indexUsage:192, logUsage:12110, numofEntries:3
+index:7, indexUsage:192, logUsage:16144, numofEntries:3
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:158000, count:9000, drop_count:98, nvm_num:3, sst_num:8899
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user5556885697430629501
+chuntable Add, user_key:user5556885697430629501, len:23
+before add to chunklog
+chunktable,add kvoffset：0x7e17
+it's update
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:192, logUsage:12110, numofEntries:3
+index:1, indexUsage:192, logUsage:12109, numofEntries:3
+index:2, indexUsage:160, logUsage:4042, numofEntries:1
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:176, logUsage:8075, numofEntries:2
+index:5, indexUsage:224, logUsage:36313, numofEntries:5
+index:6, indexUsage:192, logUsage:12110, numofEntries:3
+index:7, indexUsage:192, logUsage:16144, numofEntries:3
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:166000, count:9000, drop_count:68, nvm_num:1, sst_num:8931
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1221569073124016336
+chuntable Add, user_key:user1221569073124016336, len:23
+before add to chunklog
+chunktable,add kvoffset：0x8dd9
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user1873424500586588084
+chuntable Add, user_key:user1873424500586588084, len:23
+before add to chunklog
+chunktable,add kvoffset：0x2f4e
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user5416050314677001319
+chuntable Add, user_key:user5416050314677001319, len:23
+before add to chunklog
+chunktable,add kvoffset：0x3f10
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user5556885697430629501
+chuntable Add, user_key:user5556885697430629501, len:23
+before add to chunklog
+chunktable,add kvoffset：0x9d9b
+it's update
+after add to chunktable
+add to nvmtable, user_key:user5925302463529310029
+chuntable Add, user_key:user5925302463529310029, len:23
+before add to chunklog
+chunktable,add kvoffset：0x4ed2
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:208, logUsage:16144, numofEntries:4
+index:1, indexUsage:192, logUsage:12109, numofEntries:3
+index:2, indexUsage:160, logUsage:4042, numofEntries:1
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:176, logUsage:8075, numofEntries:2
+index:5, indexUsage:240, logUsage:44381, numofEntries:6
+index:6, indexUsage:192, logUsage:12110, numofEntries:3
+index:7, indexUsage:224, logUsage:24212, numofEntries:5
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:175301, count:9000, drop_count:89, nvm_num:5, sst_num:8906
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1177849538193019606
+chuntable Add, user_key:user1177849538193019606, len:23
+before add to chunklog
+chunktable,add kvoffset：0x5e94
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user1384143857922884429
+chuntable Add, user_key:user1384143857922884429, len:23
+before add to chunklog
+chunktable,add kvoffset：0x3f10
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:20178, numofEntries:5
+index:1, indexUsage:192, logUsage:12109, numofEntries:3
+index:2, indexUsage:160, logUsage:4042, numofEntries:1
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:176, logUsage:8075, numofEntries:2
+index:5, indexUsage:240, logUsage:44381, numofEntries:6
+index:6, indexUsage:192, logUsage:12110, numofEntries:3
+index:7, indexUsage:240, logUsage:28246, numofEntries:6
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:185000, count:9000, drop_count:83, nvm_num:2, sst_num:8915
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1873424500586588084
+chuntable Add, user_key:user1873424500586588084, len:23
+before add to chunklog
+chunktable,add kvoffset：0x4ed2
+it's update
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:24212, numofEntries:5
+index:1, indexUsage:192, logUsage:12109, numofEntries:3
+index:2, indexUsage:160, logUsage:4042, numofEntries:1
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:176, logUsage:8075, numofEntries:2
+index:5, indexUsage:240, logUsage:44381, numofEntries:6
+index:6, indexUsage:192, logUsage:12110, numofEntries:3
+index:7, indexUsage:240, logUsage:28246, numofEntries:6
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:193000, count:9000, drop_count:85, nvm_num:1, sst_num:8914
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user2514678521677343952
+chuntable Add, user_key:user2514678521677343952, len:23
+before add to chunklog
+chunktable,add kvoffset：0x1f8b
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user7598421149444525681
+chuntable Add, user_key:user7598421149444525681, len:23
+before add to chunklog
+chunktable,add kvoffset：0x2f4d
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:24212, numofEntries:5
+index:1, indexUsage:208, logUsage:16143, numofEntries:4
+index:2, indexUsage:160, logUsage:4042, numofEntries:1
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:192, logUsage:12109, numofEntries:3
+index:5, indexUsage:240, logUsage:44381, numofEntries:6
+index:6, indexUsage:192, logUsage:12110, numofEntries:3
+index:7, indexUsage:240, logUsage:28246, numofEntries:6
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:202053, count:9000, drop_count:86, nvm_num:2, sst_num:8912
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:24212, numofEntries:5
+index:1, indexUsage:208, logUsage:16143, numofEntries:4
+index:2, indexUsage:160, logUsage:4042, numofEntries:1
+index:3, indexUsage:160, logUsage:4042, numofEntries:1
+index:4, indexUsage:192, logUsage:12109, numofEntries:3
+index:5, indexUsage:240, logUsage:44381, numofEntries:6
+index:6, indexUsage:192, logUsage:12110, numofEntries:3
+index:7, indexUsage:240, logUsage:28246, numofEntries:6
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:211000, count:9000, drop_count:77, nvm_num:0, sst_num:8923
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1246856627817278035
+chuntable Add, user_key:user1246856627817278035, len:23
+before add to chunklog
+chunktable,add kvoffset：0xfca
+it's update
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:24212, numofEntries:5
+index:1, indexUsage:208, logUsage:16143, numofEntries:4
+index:2, indexUsage:160, logUsage:4042, numofEntries:1
+index:3, indexUsage:160, logUsage:8076, numofEntries:1
+index:4, indexUsage:192, logUsage:12109, numofEntries:3
+index:5, indexUsage:240, logUsage:44381, numofEntries:6
+index:6, indexUsage:192, logUsage:12110, numofEntries:3
+index:7, indexUsage:240, logUsage:28246, numofEntries:6
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:220000, count:9000, drop_count:80, nvm_num:1, sst_num:8919
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:24212, numofEntries:5
+index:1, indexUsage:208, logUsage:16143, numofEntries:4
+index:2, indexUsage:160, logUsage:4042, numofEntries:1
+index:3, indexUsage:160, logUsage:8076, numofEntries:1
+index:4, indexUsage:192, logUsage:12109, numofEntries:3
+index:5, indexUsage:240, logUsage:44381, numofEntries:6
+index:6, indexUsage:192, logUsage:12110, numofEntries:3
+index:7, indexUsage:240, logUsage:28246, numofEntries:6
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:229000, count:9000, drop_count:76, nvm_num:0, sst_num:8924
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1424059145348170394
+chuntable Add, user_key:user1424059145348170394, len:23
+before add to chunklog
+chunktable,add kvoffset：0x2f4e
+it's update
+after add to chunktable
+add to nvmtable, user_key:user8644696387220880846
+chuntable Add, user_key:user8644696387220880846, len:23
+before add to chunklog
+chunktable,add kvoffset：0x6e56
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user8714576121665607867
+chuntable Add, user_key:user8714576121665607867, len:23
+before add to chunklog
+chunktable,add kvoffset：0xfca
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:24212, numofEntries:5
+index:1, indexUsage:208, logUsage:16143, numofEntries:4
+index:2, indexUsage:176, logUsage:8076, numofEntries:2
+index:3, indexUsage:160, logUsage:8076, numofEntries:1
+index:4, indexUsage:192, logUsage:12109, numofEntries:3
+index:5, indexUsage:240, logUsage:44381, numofEntries:6
+index:6, indexUsage:192, logUsage:16144, numofEntries:3
+index:7, indexUsage:256, logUsage:32280, numofEntries:7
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:238000, count:9000, drop_count:94, nvm_num:3, sst_num:8903
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1792288422997356635
+chuntable Add, user_key:user1792288422997356635, len:23
+before add to chunklog
+chunktable,add kvoffset：0x1f8c
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user1873424500586588084
+chuntable Add, user_key:user1873424500586588084, len:23
+before add to chunklog
+chunktable,add kvoffset：0x5e94
+it's update
+after add to chunktable
+add to nvmtable, user_key:user5889913675222054881
+chuntable Add, user_key:user5889913675222054881, len:23
+before add to chunklog
+chunktable,add kvoffset：0x1f8c
+it's update
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:28246, numofEntries:5
+index:1, indexUsage:208, logUsage:16143, numofEntries:4
+index:2, indexUsage:176, logUsage:12110, numofEntries:2
+index:3, indexUsage:176, logUsage:12110, numofEntries:2
+index:4, indexUsage:192, logUsage:12109, numofEntries:3
+index:5, indexUsage:240, logUsage:44381, numofEntries:6
+index:6, indexUsage:192, logUsage:16144, numofEntries:3
+index:7, indexUsage:256, logUsage:32280, numofEntries:7
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:247000, count:9000, drop_count:90, nvm_num:3, sst_num:8907
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:28246, numofEntries:5
+index:1, indexUsage:208, logUsage:16143, numofEntries:4
+index:2, indexUsage:176, logUsage:12110, numofEntries:2
+index:3, indexUsage:176, logUsage:12110, numofEntries:2
+index:4, indexUsage:192, logUsage:12109, numofEntries:3
+index:5, indexUsage:240, logUsage:44381, numofEntries:6
+index:6, indexUsage:192, logUsage:16144, numofEntries:3
+index:7, indexUsage:256, logUsage:32280, numofEntries:7
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:256000, count:9000, drop_count:75, nvm_num:0, sst_num:8925
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user2046530722253015993
+chuntable Add, user_key:user2046530722253015993, len:23
+before add to chunklog
+chunktable,add kvoffset：0x3f0f
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user921641042944964170
+chuntable Add, user_key:user921641042944964170, len:22
+before add to chunklog
+chunktable,add kvoffset：0x2f4d
+it's update
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:28246, numofEntries:5
+index:1, indexUsage:224, logUsage:20177, numofEntries:5
+index:2, indexUsage:176, logUsage:12110, numofEntries:2
+index:3, indexUsage:176, logUsage:12110, numofEntries:2
+index:4, indexUsage:192, logUsage:16142, numofEntries:3
+index:5, indexUsage:240, logUsage:44381, numofEntries:6
+index:6, indexUsage:192, logUsage:16144, numofEntries:3
+index:7, indexUsage:256, logUsage:32280, numofEntries:7
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:265000, count:9000, drop_count:68, nvm_num:2, sst_num:8930
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:28246, numofEntries:5
+index:1, indexUsage:224, logUsage:20177, numofEntries:5
+index:2, indexUsage:176, logUsage:12110, numofEntries:2
+index:3, indexUsage:176, logUsage:12110, numofEntries:2
+index:4, indexUsage:192, logUsage:16142, numofEntries:3
+index:5, indexUsage:240, logUsage:44381, numofEntries:6
+index:6, indexUsage:192, logUsage:16144, numofEntries:3
+index:7, indexUsage:256, logUsage:32280, numofEntries:7
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:274021, count:9000, drop_count:91, nvm_num:0, sst_num:8909
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:28246, numofEntries:5
+index:1, indexUsage:224, logUsage:20177, numofEntries:5
+index:2, indexUsage:176, logUsage:12110, numofEntries:2
+index:3, indexUsage:176, logUsage:12110, numofEntries:2
+index:4, indexUsage:192, logUsage:16142, numofEntries:3
+index:5, indexUsage:240, logUsage:44381, numofEntries:6
+index:6, indexUsage:192, logUsage:16144, numofEntries:3
+index:7, indexUsage:256, logUsage:32280, numofEntries:7
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:283659, count:9000, drop_count:85, nvm_num:0, sst_num:8915
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1317092696243809433
+chuntable Add, user_key:user1317092696243809433, len:23
+before add to chunklog
+chunktable,add kvoffset：0x7e18
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user1873424500586588084
+chuntable Add, user_key:user1873424500586588084, len:23
+before add to chunklog
+chunktable,add kvoffset：0x6e56
+it's update
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:32280, numofEntries:5
+index:1, indexUsage:224, logUsage:20177, numofEntries:5
+index:2, indexUsage:176, logUsage:12110, numofEntries:2
+index:3, indexUsage:176, logUsage:12110, numofEntries:2
+index:4, indexUsage:192, logUsage:16142, numofEntries:3
+index:5, indexUsage:240, logUsage:44381, numofEntries:6
+index:6, indexUsage:192, logUsage:16144, numofEntries:3
+index:7, indexUsage:272, logUsage:36314, numofEntries:8
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:292384, count:9000, drop_count:87, nvm_num:2, sst_num:8911
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user8842135124790086173
+chuntable Add, user_key:user8842135124790086173, len:23
+before add to chunklog
+chunktable,add kvoffset：0x7e18
+it's update
+after add to chunktable
+add to nvmtable, user_key:user8909399610200789666
+chuntable Add, user_key:user8909399610200789666, len:23
+before add to chunklog
+chunktable,add kvoffset：0x2f4e
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user9010321141225035896
+chuntable Add, user_key:user9010321141225035896, len:23
+before add to chunklog
+chunktable,add kvoffset：0x4ed1
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user921641042944964170
+chuntable Add, user_key:user921641042944964170, len:22
+before add to chunklog
+chunktable,add kvoffset：0x3f0e
+it's update
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:36314, numofEntries:5
+index:1, indexUsage:240, logUsage:24211, numofEntries:6
+index:2, indexUsage:176, logUsage:12110, numofEntries:2
+index:3, indexUsage:192, logUsage:16144, numofEntries:3
+index:4, indexUsage:192, logUsage:20175, numofEntries:3
+index:5, indexUsage:240, logUsage:44381, numofEntries:6
+index:6, indexUsage:192, logUsage:16144, numofEntries:3
+index:7, indexUsage:272, logUsage:36314, numofEntries:8
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:300000, count:9000, drop_count:88, nvm_num:4, sst_num:8908
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user7598421149444525681
+chuntable Add, user_key:user7598421149444525681, len:23
+before add to chunklog
+chunktable,add kvoffset：0x5e93
+it's update
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:36314, numofEntries:5
+index:1, indexUsage:240, logUsage:28245, numofEntries:6
+index:2, indexUsage:176, logUsage:12110, numofEntries:2
+index:3, indexUsage:192, logUsage:16144, numofEntries:3
+index:4, indexUsage:192, logUsage:20175, numofEntries:3
+index:5, indexUsage:240, logUsage:44381, numofEntries:6
+index:6, indexUsage:192, logUsage:16144, numofEntries:3
+index:7, indexUsage:272, logUsage:36314, numofEntries:8
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:310000, count:9000, drop_count:83, nvm_num:1, sst_num:8916
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1186006647460095449
+chuntable Add, user_key:user1186006647460095449, len:23
+before add to chunklog
+chunktable,add kvoffset：0x6e55
+it's update
+after add to chunktable
+add to nvmtable, user_key:user7598421149444525681
+chuntable Add, user_key:user7598421149444525681, len:23
+before add to chunklog
+chunktable,add kvoffset：0x7e17
+it's update
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:36314, numofEntries:5
+index:1, indexUsage:240, logUsage:36313, numofEntries:6
+index:2, indexUsage:176, logUsage:12110, numofEntries:2
+index:3, indexUsage:192, logUsage:16144, numofEntries:3
+index:4, indexUsage:192, logUsage:20175, numofEntries:3
+index:5, indexUsage:240, logUsage:44381, numofEntries:6
+index:6, indexUsage:192, logUsage:16144, numofEntries:3
+index:7, indexUsage:272, logUsage:36314, numofEntries:8
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:319000, count:9000, drop_count:82, nvm_num:2, sst_num:8916
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1553654857608355132
+chuntable Add, user_key:user1553654857608355132, len:23
+before add to chunklog
+chunktable,add kvoffset：0x4ecf
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user2252659489048014813
+chuntable Add, user_key:user2252659489048014813, len:23
+before add to chunklog
+chunktable,add kvoffset：0x8dda
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user9178477295548330385
+chuntable Add, user_key:user9178477295548330385, len:23
+before add to chunklog
+chunktable,add kvoffset：0xad5d
+it's update
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:36314, numofEntries:5
+index:1, indexUsage:240, logUsage:36313, numofEntries:6
+index:2, indexUsage:176, logUsage:12110, numofEntries:2
+index:3, indexUsage:192, logUsage:16144, numofEntries:3
+index:4, indexUsage:208, logUsage:24209, numofEntries:4
+index:5, indexUsage:240, logUsage:48415, numofEntries:6
+index:6, indexUsage:192, logUsage:16144, numofEntries:3
+index:7, indexUsage:296, logUsage:40348, numofEntries:9
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:328000, count:9000, drop_count:90, nvm_num:3, sst_num:8907
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:36314, numofEntries:5
+index:1, indexUsage:240, logUsage:36313, numofEntries:6
+index:2, indexUsage:176, logUsage:12110, numofEntries:2
+index:3, indexUsage:192, logUsage:16144, numofEntries:3
+index:4, indexUsage:208, logUsage:24209, numofEntries:4
+index:5, indexUsage:240, logUsage:48415, numofEntries:6
+index:6, indexUsage:192, logUsage:16144, numofEntries:3
+index:7, indexUsage:296, logUsage:40348, numofEntries:9
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:337372, count:9000, drop_count:67, nvm_num:0, sst_num:8933
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1036772948931065996
+chuntable Add, user_key:user1036772948931065996, len:23
+before add to chunklog
+chunktable,add kvoffset：0xbd1f
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user5623346008298208904
+chuntable Add, user_key:user5623346008298208904, len:23
+before add to chunklog
+chunktable,add kvoffset：0x2f4e
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user5683016887046854416
+chuntable Add, user_key:user5683016887046854416, len:23
+before add to chunklog
+chunktable,add kvoffset：0x3f10
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:36314, numofEntries:5
+index:1, indexUsage:240, logUsage:36313, numofEntries:6
+index:2, indexUsage:208, logUsage:20178, numofEntries:4
+index:3, indexUsage:192, logUsage:16144, numofEntries:3
+index:4, indexUsage:208, logUsage:24209, numofEntries:4
+index:5, indexUsage:256, logUsage:52449, numofEntries:7
+index:6, indexUsage:192, logUsage:16144, numofEntries:3
+index:7, indexUsage:296, logUsage:40348, numofEntries:9
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:347000, count:9000, drop_count:64, nvm_num:3, sst_num:8933
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1388774215486347568
+chuntable Add, user_key:user1388774215486347568, len:23
+before add to chunklog
+chunktable,add kvoffset：0x3f10
+it's update
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:224, logUsage:36314, numofEntries:5
+index:1, indexUsage:240, logUsage:36313, numofEntries:6
+index:2, indexUsage:208, logUsage:20178, numofEntries:4
+index:3, indexUsage:192, logUsage:16144, numofEntries:3
+index:4, indexUsage:208, logUsage:24209, numofEntries:4
+index:5, indexUsage:256, logUsage:52449, numofEntries:7
+index:6, indexUsage:192, logUsage:20178, numofEntries:3
+index:7, indexUsage:296, logUsage:40348, numofEntries:9
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:355000, count:9000, drop_count:79, nvm_num:1, sst_num:8920
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user8911901774627300097
+chuntable Add, user_key:user8911901774627300097, len:23
+before add to chunklog
+chunktable,add kvoffset：0xcce1
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user8915601756179374438
+chuntable Add, user_key:user8915601756179374438, len:23
+before add to chunklog
+chunktable,add kvoffset：0x8dda
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:240, logUsage:40348, numofEntries:6
+index:1, indexUsage:240, logUsage:36313, numofEntries:6
+index:2, indexUsage:208, logUsage:20178, numofEntries:4
+index:3, indexUsage:192, logUsage:16144, numofEntries:3
+index:4, indexUsage:208, logUsage:24209, numofEntries:4
+index:5, indexUsage:272, logUsage:56483, numofEntries:8
+index:6, indexUsage:192, logUsage:20178, numofEntries:3
+index:7, indexUsage:296, logUsage:40348, numofEntries:9
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:364000, count:9000, drop_count:72, nvm_num:2, sst_num:8926
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1036772948931065996
+chuntable Add, user_key:user1036772948931065996, len:23
+before add to chunklog
+chunktable,add kvoffset：0xdca3
+it's update
+after add to chunktable
+add to nvmtable, user_key:user1177849538193019606
+chuntable Add, user_key:user1177849538193019606, len:23
+before add to chunklog
+chunktable,add kvoffset：0x9d9c
+it's update
+after add to chunktable
+add to nvmtable, user_key:user1553654857608355132
+chuntable Add, user_key:user1553654857608355132, len:23
+before add to chunklog
+chunktable,add kvoffset：0x5e91
+it's update
+after add to chunktable
+add to nvmtable, user_key:user2833128172891269310
+chuntable Add, user_key:user2833128172891269310, len:23
+before add to chunklog
+chunktable,add kvoffset：0x4ed2
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user3410997124913848265
+chuntable Add, user_key:user3410997124913848265, len:23
+before add to chunklog
+chunktable,add kvoffset：0x8dd9
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user6705172525143856558
+chuntable Add, user_key:user6705172525143856558, len:23
+before add to chunklog
+chunktable,add kvoffset：0x9d9c
+it's update
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:240, logUsage:44382, numofEntries:6
+index:1, indexUsage:256, logUsage:40347, numofEntries:7
+index:2, indexUsage:224, logUsage:24212, numofEntries:5
+index:3, indexUsage:192, logUsage:16144, numofEntries:3
+index:4, indexUsage:208, logUsage:28243, numofEntries:4
+index:5, indexUsage:272, logUsage:60517, numofEntries:8
+index:6, indexUsage:192, logUsage:20178, numofEntries:3
+index:7, indexUsage:296, logUsage:44382, numofEntries:9
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:373000, count:9000, drop_count:91, nvm_num:6, sst_num:8903
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:240, logUsage:44382, numofEntries:6
+index:1, indexUsage:256, logUsage:40347, numofEntries:7
+index:2, indexUsage:224, logUsage:24212, numofEntries:5
+index:3, indexUsage:192, logUsage:16144, numofEntries:3
+index:4, indexUsage:208, logUsage:28243, numofEntries:4
+index:5, indexUsage:272, logUsage:60517, numofEntries:8
+index:6, indexUsage:192, logUsage:20178, numofEntries:3
+index:7, indexUsage:296, logUsage:44382, numofEntries:9
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:382003, count:9000, drop_count:76, nvm_num:0, sst_num:8924
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user2263515491050608108
+chuntable Add, user_key:user2263515491050608108, len:23
+before add to chunklog
+chunktable,add kvoffset：0xad5e
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user5557868070730159554
+chuntable Add, user_key:user5557868070730159554, len:23
+before add to chunklog
+chunktable,add kvoffset：0x5e94
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user7989659395441872373
+chuntable Add, user_key:user7989659395441872373, len:23
+before add to chunklog
+chunktable,add kvoffset：0x4ed2
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:240, logUsage:44382, numofEntries:6
+index:1, indexUsage:256, logUsage:40347, numofEntries:7
+index:2, indexUsage:240, logUsage:28246, numofEntries:6
+index:3, indexUsage:192, logUsage:16144, numofEntries:3
+index:4, indexUsage:208, logUsage:28243, numofEntries:4
+index:5, indexUsage:272, logUsage:60517, numofEntries:8
+index:6, indexUsage:208, logUsage:24212, numofEntries:4
+index:7, indexUsage:312, logUsage:48416, numofEntries:10
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:391000, count:9000, drop_count:74, nvm_num:3, sst_num:8923
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:240, logUsage:44382, numofEntries:6
+index:1, indexUsage:256, logUsage:40347, numofEntries:7
+index:2, indexUsage:240, logUsage:28246, numofEntries:6
+index:3, indexUsage:192, logUsage:16144, numofEntries:3
+index:4, indexUsage:208, logUsage:28243, numofEntries:4
+index:5, indexUsage:272, logUsage:60517, numofEntries:8
+index:6, indexUsage:208, logUsage:24212, numofEntries:4
+index:7, indexUsage:312, logUsage:48416, numofEntries:10
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:400000, count:9000, drop_count:92, nvm_num:0, sst_num:8908
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+edit add metafile:20
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1177849538193019606
+chuntable Add, user_key:user1177849538193019606, len:23
+before add to chunklog
+chunktable,add kvoffset：0xbd20
+it's update
+after add to chunktable
+add to nvmtable, user_key:user2149144780635223527
+chuntable Add, user_key:user2149144780635223527, len:23
+before add to chunklog
+chunktable,add kvoffset：0xad5e
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:256, logUsage:48416, numofEntries:7
+index:1, indexUsage:256, logUsage:40347, numofEntries:7
+index:2, indexUsage:240, logUsage:28246, numofEntries:6
+index:3, indexUsage:192, logUsage:16144, numofEntries:3
+index:4, indexUsage:208, logUsage:28243, numofEntries:4
+index:5, indexUsage:272, logUsage:60517, numofEntries:8
+index:6, indexUsage:208, logUsage:24212, numofEntries:4
+index:7, indexUsage:312, logUsage:52450, numofEntries:10
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:409000, count:9000, drop_count:103, nvm_num:2, sst_num:8895
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user5999907531798048289
+chuntable Add, user_key:user5999907531798048289, len:23
+before add to chunklog
+chunktable,add kvoffset：0x6e53
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user7713329748726572238
+chuntable Add, user_key:user7713329748726572238, len:23
+before add to chunklog
+chunktable,add kvoffset：0x3f10
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:256, logUsage:48416, numofEntries:7
+index:1, indexUsage:256, logUsage:40347, numofEntries:7
+index:2, indexUsage:240, logUsage:28246, numofEntries:6
+index:3, indexUsage:208, logUsage:20178, numofEntries:4
+index:4, indexUsage:224, logUsage:32277, numofEntries:5
+index:5, indexUsage:272, logUsage:60517, numofEntries:8
+index:6, indexUsage:208, logUsage:24212, numofEntries:4
+index:7, indexUsage:312, logUsage:52450, numofEntries:10
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:418000, count:9000, drop_count:67, nvm_num:2, sst_num:8931
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1221569073124016336
+chuntable Add, user_key:user1221569073124016336, len:23
+before add to chunklog
+chunktable,add kvoffset：0xec65
+it's update
+after add to chunktable
+add to nvmtable, user_key:user1384143857922884429
+chuntable Add, user_key:user1384143857922884429, len:23
+before add to chunklog
+chunktable,add kvoffset：0xbd20
+it's update
+after add to chunktable
+add to nvmtable, user_key:user4675547397271298093
+chuntable Add, user_key:user4675547397271298093, len:23
+before add to chunklog
+chunktable,add kvoffset：0xcce2
+it's update
+after add to chunktable
+add to nvmtable, user_key:user7713329748726572238
+chuntable Add, user_key:user7713329748726572238, len:23
+before add to chunklog
+chunktable,add kvoffset：0x4ed2
+it's update
+after add to chunktable
+add to nvmtable, user_key:user7740988274891866274
+chuntable Add, user_key:user7740988274891866274, len:23
+before add to chunklog
+chunktable,add kvoffset：0x5e94
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:256, logUsage:52450, numofEntries:7
+index:1, indexUsage:256, logUsage:40347, numofEntries:7
+index:2, indexUsage:240, logUsage:28246, numofEntries:6
+index:3, indexUsage:224, logUsage:28246, numofEntries:5
+index:4, indexUsage:224, logUsage:32277, numofEntries:5
+index:5, indexUsage:272, logUsage:64551, numofEntries:8
+index:6, indexUsage:208, logUsage:24212, numofEntries:4
+index:7, indexUsage:312, logUsage:56484, numofEntries:10
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:428000, count:9000, drop_count:82, nvm_num:5, sst_num:8913
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user4304346536606283947
+chuntable Add, user_key:user4304346536606283947, len:23
+before add to chunklog
+chunktable,add kvoffset：0xdca4
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:256, logUsage:52450, numofEntries:7
+index:1, indexUsage:256, logUsage:40347, numofEntries:7
+index:2, indexUsage:240, logUsage:28246, numofEntries:6
+index:3, indexUsage:224, logUsage:28246, numofEntries:5
+index:4, indexUsage:224, logUsage:32277, numofEntries:5
+index:5, indexUsage:272, logUsage:64551, numofEntries:8
+index:6, indexUsage:208, logUsage:24212, numofEntries:4
+index:7, indexUsage:328, logUsage:60518, numofEntries:11
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:435000, count:9000, drop_count:64, nvm_num:1, sst_num:8935
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user5416050314677001319
+chuntable Add, user_key:user5416050314677001319, len:23
+before add to chunklog
+chunktable,add kvoffset：0xec66
+it's update
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:256, logUsage:52450, numofEntries:7
+index:1, indexUsage:256, logUsage:40347, numofEntries:7
+index:2, indexUsage:240, logUsage:28246, numofEntries:6
+index:3, indexUsage:224, logUsage:28246, numofEntries:5
+index:4, indexUsage:224, logUsage:32277, numofEntries:5
+index:5, indexUsage:272, logUsage:64551, numofEntries:8
+index:6, indexUsage:208, logUsage:24212, numofEntries:4
+index:7, indexUsage:328, logUsage:64552, numofEntries:11
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:446000, count:9000, drop_count:76, nvm_num:1, sst_num:8923
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user1020729020324628388
+chuntable Add, user_key:user1020729020324628388, len:23
+before add to chunklog
+chunktable,add kvoffset：0x6e56
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user1873424500586588084
+chuntable Add, user_key:user1873424500586588084, len:23
+before add to chunklog
+chunktable,add kvoffset：0xcce2
+it's update
+after add to chunktable
+add to nvmtable, user_key:user5683016887046854416
+chuntable Add, user_key:user5683016887046854416, len:23
+before add to chunklog
+chunktable,add kvoffset：0x6e56
+it's update
+after add to chunktable
+add to nvmtable, user_key:user962208468162975307
+chuntable Add, user_key:user962208468162975307, len:22
+before add to chunklog
+chunktable,add kvoffset：0x7e18
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:256, logUsage:56484, numofEntries:7
+index:1, indexUsage:256, logUsage:40347, numofEntries:7
+index:2, indexUsage:240, logUsage:32280, numofEntries:6
+index:3, indexUsage:256, logUsage:36313, numofEntries:7
+index:4, indexUsage:224, logUsage:32277, numofEntries:5
+index:5, indexUsage:272, logUsage:64551, numofEntries:8
+index:6, indexUsage:208, logUsage:24212, numofEntries:4
+index:7, indexUsage:328, logUsage:64552, numofEntries:11
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:454000, count:9000, drop_count:74, nvm_num:4, sst_num:8922
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+in MakeRoomForImmu, check
+after check
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:256, logUsage:56484, numofEntries:7
+index:1, indexUsage:256, logUsage:40347, numofEntries:7
+index:2, indexUsage:240, logUsage:32280, numofEntries:6
+index:3, indexUsage:256, logUsage:36313, numofEntries:7
+index:4, indexUsage:224, logUsage:32277, numofEntries:5
+index:5, indexUsage:272, logUsage:64551, numofEntries:8
+index:6, indexUsage:208, logUsage:24212, numofEntries:4
+index:7, indexUsage:328, logUsage:64552, numofEntries:11
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:463829, count:9000, drop_count:76, nvm_num:0, sst_num:8924
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user4609975439218555904
+chuntable Add, user_key:user4609975439218555904, len:23
+before add to chunklog
+chunktable,add kvoffset：0x8dd9
+it's insert
+after add to chunktable
+add to nvmtable, user_key:user6921238050827256314
+chuntable Add, user_key:user6921238050827256314, len:23
+before add to chunklog
+chunktable,add kvoffset：0x7e18
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:256, logUsage:56484, numofEntries:7
+index:1, indexUsage:256, logUsage:40347, numofEntries:7
+index:2, indexUsage:256, logUsage:36314, numofEntries:7
+index:3, indexUsage:272, logUsage:40347, numofEntries:8
+index:4, indexUsage:224, logUsage:32277, numofEntries:5
+index:5, indexUsage:272, logUsage:64551, numofEntries:8
+index:6, indexUsage:208, logUsage:24212, numofEntries:4
+index:7, indexUsage:328, logUsage:64552, numofEntries:11
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:473000, count:9000, drop_count:90, nvm_num:2, sst_num:8908
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user9087816617508306919
+chuntable Add, user_key:user9087816617508306919, len:23
+before add to chunklog
+chunktable,add kvoffset：0x9d9b
+it's insert
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:256, logUsage:56484, numofEntries:7
+index:1, indexUsage:256, logUsage:40347, numofEntries:7
+index:2, indexUsage:256, logUsage:36314, numofEntries:7
+index:3, indexUsage:296, logUsage:44381, numofEntries:9
+index:4, indexUsage:224, logUsage:32277, numofEntries:5
+index:5, indexUsage:272, logUsage:64551, numofEntries:8
+index:6, indexUsage:208, logUsage:24212, numofEntries:4
+index:7, indexUsage:328, logUsage:64552, numofEntries:11
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:481000, count:9000, drop_count:101, nvm_num:1, sst_num:8898
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:256, logUsage:56484, numofEntries:7
+index:1, indexUsage:256, logUsage:40347, numofEntries:7
+index:2, indexUsage:256, logUsage:36314, numofEntries:7
+index:3, indexUsage:296, logUsage:44381, numofEntries:9
+index:4, indexUsage:224, logUsage:32277, numofEntries:5
+index:5, indexUsage:272, logUsage:64551, numofEntries:8
+index:6, indexUsage:208, logUsage:24212, numofEntries:4
+index:7, indexUsage:328, logUsage:64552, numofEntries:11
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:490000, count:9000, drop_count:78, nvm_num:0, sst_num:8922
+finish addfile
+edit add metafile:20
+after logandapply
+finish CompactMemTable
+edit add metafile:20
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+add to nvmtable, user_key:user2263515491050608108
+chuntable Add, user_key:user2263515491050608108, len:23
+before add to chunklog
+chunktable,add kvoffset：0xfc28
+it's update
+after add to chunktable
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:256, logUsage:56484, numofEntries:7
+index:1, indexUsage:256, logUsage:40347, numofEntries:7
+index:2, indexUsage:256, logUsage:36314, numofEntries:7
+index:3, indexUsage:296, logUsage:44381, numofEntries:9
+index:4, indexUsage:224, logUsage:32277, numofEntries:5
+index:5, indexUsage:272, logUsage:64551, numofEntries:8
+index:6, indexUsage:208, logUsage:24212, numofEntries:4
+index:7, indexUsage:328, logUsage:68586, numofEntries:11
+-------------END PRINT_NVMTABLE-----------------
+after buildtable, req_num_of_bf:499000, count:9000, drop_count:101, nvm_num:1, sst_num:8898
+finish addfile
+after logandapply
+finish CompactMemTable
+before delete nvmtbl_
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:256, logUsage:56484, numofEntries:7
+index:1, indexUsage:256, logUsage:40347, numofEntries:7
+index:2, indexUsage:256, logUsage:36314, numofEntries:7
+index:3, indexUsage:296, logUsage:44381, numofEntries:9
+index:4, indexUsage:224, logUsage:32277, numofEntries:5
+index:5, indexUsage:272, logUsage:64551, numofEntries:8
+index:6, indexUsage:208, logUsage:24212, numofEntries:4
+index:7, indexUsage:328, logUsage:68586, numofEntries:11
+-------------END PRINT_NVMTABLE-----------------
+save metafile:/mnt/pmemdir/dbbench/000020.met
+unref, refs:0
+after handle job
+after handle job
+after handle job
+after handle job

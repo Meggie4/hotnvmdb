@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/nvmtable_test.dir/util/testharness.cc.o CMakeFiles/nvmtable_test.dir/util/testutil.cc.o CMakeFiles/nvmtable_test.dir/db/nvmtable_test.cc.o  -o nvmtable_test libleveldb.a -lhoard -lnuma -lpthread 
