@@ -177,6 +177,7 @@ DBImpl::DBImpl(const Options& raw_options, const std::string& dbname,
       logfile_number_(0),
       ////////////meggie
       nvmtbl_(new NVMTable(internal_comparator_)),
+      chunk_been_allocated_(false),
       hot_bf_(new MultiHotBloomFilter()),
       ////////////meggie
       log_(nullptr),
@@ -215,13 +216,13 @@ DBImpl::~DBImpl() {
   if (imm_ != nullptr) imm_->Unref();
   
   ////////////meggie
+  std::string metafilename = chunkMetaFileName(dbname_nvm_, chunk_meta_file_); 
+  nvmtbl_->SaveMetadata(metafilename);
   if (nvmtbl_ != nullptr){ 
       DEBUG_T("before delete nvmtbl_\n");
       nvmtbl_->PrintInfo();
       nvmtbl_->Unref();
   }
-  std::string metafilename = chunkMetaFileName(dbname_nvm_, chunk_meta_file_); 
-  nvmtbl_->SaveMetadata(metafilename);
   delete hot_bf_;
   delete thpool_;
   delete timer;

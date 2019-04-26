@@ -16,7 +16,7 @@
 #include "util/multi_bloomfilter.h"
 #include "port/cache_flush.h"
 
-#define BIT_BLOOM_SIZE (1 << 10) << 10
+#define BIT_BLOOM_SIZE 1024 * 1024
 #define BIT_BLOOM_HASH 4
 namespace leveldb{
 
@@ -76,7 +76,7 @@ namespace leveldb{
 
             virtual Status status() const { return Status::OK(); }
 
-            void* operator new(std::size_t sz){
+            /*void* operator new(std::size_t sz){
                 return malloc(sz);
             }
 
@@ -86,7 +86,7 @@ namespace leveldb{
 
             void operator delete(void* ptr){
                 free(ptr);
-            }
+            }*/
         private:
             chunkTable::Table::Iterator iter_;
             chunkLog* cklog_;
@@ -199,6 +199,8 @@ namespace leveldb{
     void chunkTable::SaveBloomFilter(char* start){
         memset(start, 0, bbf_->bytes_);
         memcpy_persist(start, bbf_->bits_, bbf_->bytes_); 
+        DEBUG_T("start:%p, bbf_->bytes_:%zu, bbf_->bits_:%p\n",
+                start, bbf_->bytes_, bbf_->bits_);
     }
 
     void chunkTable::RecoverBloomFilter(char* start){
@@ -342,10 +344,10 @@ namespace leveldb{
                 perror("create_metfile_failed\n");
         }
         
-        size_t bytes = (BIT_BLOOM_SIZE + 7) / 8;
+        size_t bytes = ((BIT_BLOOM_SIZE + 7) / 8);
         size_t metfile_size = (bytes + 1) * kNumChunkTable;  
         
-        DEBUG_T("metfile_size:%zu\n", metfile_size);
+        DEBUG_T("BIT_BLOOM_SIZE + 7:%d, bytes:%zu, kNumChunkTable:%d, metfile_size:%zu\n", BIT_BLOOM_SIZE + 7, bytes, kNumChunkTable, metfile_size);
         
         if(ftruncate(fd, metfile_size) != 0){
             perror("ftruncate_failed\n");
@@ -371,13 +373,14 @@ namespace leveldb{
             if(fd == -1)
                 perror("create_metfile_failed\n");
         }
-        size_t bytes = (BIT_BLOOM_SIZE + 7) / 8;
+        size_t bytes = ((BIT_BLOOM_SIZE + 7) / 8) ;
         size_t metfile_size = (bytes + 1) * kNumChunkTable;  
         if(ftruncate(fd, metfile_size) != 0){
             perror("ftruncate_failed\n");
         }
         char* meta_map_start = (char*)mmap(NULL, metfile_size, PROT_READ | PROT_WRITE, 
                         MAP_SHARED, fd, 0); 
+        DEBUG_T("BIT_BLOOM_SIZE:%d, bytes:%zu, kNumChunkTable:%d, metfile_size:%zu\n", BIT_BLOOM_SIZE, bytes, kNumChunkTable, metfile_size);
         for(auto iter = update_chunks.begin(); iter != update_chunks.end(); iter++){
             DEBUG_T("iter->first:%d\n", iter->first);
             char* start = meta_map_start + (bytes + 1) * (iter->first);
