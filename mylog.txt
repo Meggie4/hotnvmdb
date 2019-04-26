@@ -1,0 +1,420 @@
+ref, refs:1
+to handle job
+to handle job
+to handle job
+to handle job
+after MarkFileNumberUsed, s.ok()
+after recovery, chunkmetafile:0
+after recover metadata
+---------printChunkFileNumbers--------
+chunk0: index number:0, log number:0
+chunk1: index number:0, log number:0
+chunk2: index number:0, log number:0
+chunk3: index number:0, log number:0
+chunk4: index number:0, log number:0
+chunk5: index number:0, log number:0
+chunk6: index number:0, log number:0
+chunk7: index number:0, log number:0
+---------printChunkFileNumbers--------
+edit add metafile:20
+logandapply, chunkindex_filenumber:4, chunkLogFilenumber:5
+logandapply, chunkindex_filenumber:6, chunkLogFilenumber:7
+logandapply, chunkindex_filenumber:8, chunkLogFilenumber:9
+logandapply, chunkindex_filenumber:10, chunkLogFilenumber:11
+logandapply, chunkindex_filenumber:12, chunkLogFilenumber:13
+logandapply, chunkindex_filenumber:14, chunkLogFilenumber:15
+logandapply, chunkindex_filenumber:16, chunkLogFilenumber:17
+logandapply, chunkindex_filenumber:18, chunkLogFilenumber:19
+save metafile:/mnt/pmemdir/dbbench/000020.met
+BIT_BLOOM_SIZE + 7:1048583, bytes:131072, kNumChunkTable:8, metfile_size:1048584
+start:0x7fb3285a2000, bbf_->bytes_:131072, bbf_->bits_:0x7fb32af0f010
+start:0x7fb3285c2001, bbf_->bytes_:131072, bbf_->bits_:0x7fb32aeee010
+start:0x7fb3285e2002, bbf_->bytes_:131072, bbf_->bits_:0x7fb32aecd010
+start:0x7fb328602003, bbf_->bytes_:131072, bbf_->bits_:0x7fb32aeac010
+start:0x7fb328622004, bbf_->bytes_:131072, bbf_->bits_:0x7fb32ae8b010
+start:0x7fb328642005, bbf_->bytes_:131072, bbf_->bits_:0x7fb32ae6a010
+start:0x7fb328662006, bbf_->bytes_:131072, bbf_->bits_:0x7fb32ae49010
+start:0x7fb328682007, bbf_->bytes_:131072, bbf_->bits_:0x7fb32ae28010
+before delete nvmtbl_
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:132, logUsage:0, numofEntries:0
+index:1, indexUsage:132, logUsage:0, numofEntries:0
+index:2, indexUsage:132, logUsage:0, numofEntries:0
+index:3, indexUsage:132, logUsage:0, numofEntries:0
+index:4, indexUsage:132, logUsage:0, numofEntries:0
+index:5, indexUsage:132, logUsage:0, numofEntries:0
+index:6, indexUsage:132, logUsage:0, numofEntries:0
+index:7, indexUsage:132, logUsage:0, numofEntries:0
+-------------END PRINT_NVMTABLE-----------------
+unref, refs:0
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+after handle job
+after handle job
+after handle job
+after handle job
+ref, refs:1
+to handle job
+to handle job
+to handle job
+to handle job
+after MarkFileNumberUsed, s.ok()
+after recovery, chunkmetafile:0
+after recover metadata
+---------printChunkFileNumbers--------
+chunk0: index number:0, log number:0
+chunk1: index number:0, log number:0
+chunk2: index number:0, log number:0
+chunk3: index number:0, log number:0
+chunk4: index number:0, log number:0
+chunk5: index number:0, log number:0
+chunk6: index number:0, log number:0
+chunk7: index number:0, log number:0
+---------printChunkFileNumbers--------
+edit add metafile:20
+logandapply, chunkindex_filenumber:4, chunkLogFilenumber:5
+logandapply, chunkindex_filenumber:6, chunkLogFilenumber:7
+logandapply, chunkindex_filenumber:8, chunkLogFilenumber:9
+logandapply, chunkindex_filenumber:10, chunkLogFilenumber:11
+logandapply, chunkindex_filenumber:12, chunkLogFilenumber:13
+logandapply, chunkindex_filenumber:14, chunkLogFilenumber:15
+logandapply, chunkindex_filenumber:16, chunkLogFilenumber:17
+logandapply, chunkindex_filenumber:18, chunkLogFilenumber:19
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+to_compaction_list_, size:1
+sstnum_of_chunk:5
+INIT_NVM_COMPACT:0
+CreateNewchunkTable, start
+CreateNewchunkTable, end
+before add all job, sz:1
+have add job
+before wait
+have get job from queue
+before WriteNVMTableToLevel0
+NVMTable compaction Generated table #66, 977730 bytes
+sst_num:241, hot_num:0
+finish WriteNVMTableToLevel0
+after handle job
+to handle job
+after wait
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+edit add metafile:20
+logandapply, chunkindex_filenumber:4, chunkLogFilenumber:5
+logandapply, chunkindex_filenumber:6, chunkLogFilenumber:7
+logandapply, chunkindex_filenumber:8, chunkLogFilenumber:9
+logandapply, chunkindex_filenumber:10, chunkLogFilenumber:11
+logandapply, chunkindex_filenumber:12, chunkLogFilenumber:13
+logandapply, chunkindex_filenumber:14, chunkLogFilenumber:15
+logandapply, chunkindex_filenumber:63, chunkLogFilenumber:64
+logandapply, chunkindex_filenumber:18, chunkLogFilenumber:19
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+to_compaction_list_, size:1
+sstnum_of_chunk:5
+INIT_NVM_COMPACT:0
+CreateNewchunkTable, start
+CreateNewchunkTable, end
+before add all job, sz:1
+have add job
+before wait
+have get job from queue
+before WriteNVMTableToLevel0
+NVMTable compaction Generated table #83, 993928 bytes
+sst_num:245, hot_num:0
+finish WriteNVMTableToLevel0
+after handle job
+to handle job
+after wait
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+edit add metafile:20
+logandapply, chunkindex_filenumber:4, chunkLogFilenumber:5
+logandapply, chunkindex_filenumber:6, chunkLogFilenumber:7
+logandapply, chunkindex_filenumber:8, chunkLogFilenumber:9
+logandapply, chunkindex_filenumber:10, chunkLogFilenumber:11
+logandapply, chunkindex_filenumber:80, chunkLogFilenumber:81
+logandapply, chunkindex_filenumber:14, chunkLogFilenumber:15
+logandapply, chunkindex_filenumber:63, chunkLogFilenumber:64
+logandapply, chunkindex_filenumber:18, chunkLogFilenumber:19
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+to_compaction_list_, size:2
+sstnum_of_chunk:5
+INIT_NVM_COMPACT:0
+CreateNewchunkTable, start
+CreateNewchunkTable, end
+INIT_NVM_COMPACT:1
+CreateNewchunkTable, start
+CreateNewchunkTable, end
+before add all job, sz:2
+have add job
+have add job
+before wait
+have get job from queue
+before WriteNVMTableToLevel0
+have get job from queue
+before WriteNVMTableToLevel0
+NVMTable compaction Generated table #108, 1058903 bytes
+NVMTable compaction Generated table #96, 1067056 bytes
+sst_num:261, hot_num:0
+sst_num:263, hot_num:0
+finish WriteNVMTableToLevel0
+finish WriteNVMTableToLevel0
+after handle job
+after handle job
+to handle job
+to handle job
+after wait
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+edit add metafile:20
+logandapply, chunkindex_filenumber:4, chunkLogFilenumber:5
+logandapply, chunkindex_filenumber:93, chunkLogFilenumber:94
+logandapply, chunkindex_filenumber:8, chunkLogFilenumber:9
+logandapply, chunkindex_filenumber:10, chunkLogFilenumber:11
+logandapply, chunkindex_filenumber:80, chunkLogFilenumber:81
+logandapply, chunkindex_filenumber:14, chunkLogFilenumber:15
+logandapply, chunkindex_filenumber:63, chunkLogFilenumber:64
+logandapply, chunkindex_filenumber:105, chunkLogFilenumber:106
+edit add metafile:20
+edit add metafile:20
+in MakeRoomForImmu, check
+after check
+to_compaction_list_, size:2
+sstnum_of_chunk:5
+INIT_NVM_COMPACT:0
+CreateNewchunkTable, start
+CreateNewchunkTable, end
+INIT_NVM_COMPACT:1
+CreateNewchunkTable, start
+CreateNewchunkTable, end
+before add all job, sz:2
+have add job
+have get job from queue
+before WriteNVMTableToLevel0
+have add job
+have get job from queue
+before wait
+before WriteNVMTableToLevel0
+NVMTable compaction Generated table #135, 985746 bytes
+NVMTable compaction Generated table #123, 985897 bytes
+sst_num:243, hot_num:0
+sst_num:243, hot_num:0
+finish WriteNVMTableToLevel0
+finish WriteNVMTableToLevel0
+after handle job
+after handle job
+to handle job
+to handle job
+after wait
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+edit add metafile:20
+logandapply, chunkindex_filenumber:120, chunkLogFilenumber:121
+logandapply, chunkindex_filenumber:93, chunkLogFilenumber:94
+logandapply, chunkindex_filenumber:8, chunkLogFilenumber:9
+logandapply, chunkindex_filenumber:132, chunkLogFilenumber:133
+logandapply, chunkindex_filenumber:80, chunkLogFilenumber:81
+logandapply, chunkindex_filenumber:14, chunkLogFilenumber:15
+logandapply, chunkindex_filenumber:63, chunkLogFilenumber:64
+logandapply, chunkindex_filenumber:105, chunkLogFilenumber:106
+edit add metafile:20
+save metafile:/mnt/pmemdir/dbbench/000020.met
+BIT_BLOOM_SIZE + 7:1048583, bytes:131072, kNumChunkTable:8, metfile_size:1048584
+start:0x7fb32ae2f000, bbf_->bytes_:131072, bbf_->bits_:0x7fb2dc093150
+start:0x7fb32ae4f001, bbf_->bytes_:131072, bbf_->bits_:0x7fb2dc0413f0
+start:0x7fb32ae6f002, bbf_->bytes_:131072, bbf_->bits_:0x21ff4a0
+start:0x7fb32ae8f003, bbf_->bytes_:131072, bbf_->bits_:0x7fb2dc0b3160
+start:0x7fb32aeaf004, bbf_->bytes_:131072, bbf_->bits_:0x7fb2dc0210d0
+start:0x7fb32aecf005, bbf_->bytes_:131072, bbf_->bits_:0x225fbc0
+start:0x7fb32aeef006, bbf_->bytes_:131072, bbf_->bits_:0x7fb2dc000c70
+start:0x7fb32af0f007, bbf_->bytes_:131072, bbf_->bits_:0x7fb2dc0615f0
+before delete nvmtbl_
+---------------PRINT_NVMTABLE-------------------
+index:0, indexUsage:2120, logUsage:427597, numofEntries:106
+index:1, indexUsage:2568, logUsage:915698, numofEntries:132
+index:2, indexUsage:4712, logUsage:19326287, numofEntries:248
+index:3, indexUsage:2152, logUsage:435666, numofEntries:108
+index:4, indexUsage:2648, logUsage:1403813, numofEntries:137
+index:5, indexUsage:4552, logUsage:19899114, numofEntries:238
+index:6, indexUsage:3232, logUsage:4090357, numofEntries:168
+index:7, indexUsage:2536, logUsage:871324, numofEntries:130
+-------------END PRINT_NVMTABLE-----------------
+unref, refs:0
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+have delete_ArenaNVM in ~ArenaNVM
+delete_chunklog end
+after handle job
+after handle job
+after handle job
+after handle job

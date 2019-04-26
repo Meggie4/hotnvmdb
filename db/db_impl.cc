@@ -667,6 +667,8 @@ void DBImpl::CompactMemTable() {
 
   // Replace immutable memtable with the generated Table
   if (s.ok()) {
+    edit.SetPrevLogNumber(0);
+    edit.SetLogNumber(logfile_number_);  // Earlier logs no longer needed
     s = versions_->LogAndApply(&edit, &mutex_);
   }
 
@@ -1573,8 +1575,8 @@ void DBImpl::MovetoNVMTable(){
     VersionEdit edit;
     edit.SetPrevLogNumber(0);
     edit.SetLogNumber(logfile_number_);
-    edit.update_chunkfiles(chunk_index_files_, chunk_log_files_);
-    edit.SetMetaNumber(chunk_meta_file_);
+    //edit.update_chunkfiles(chunk_index_files_, chunk_log_files_);
+    //edit.SetMetaNumber(chunk_meta_file_);
     
     Status s = versions_->LogAndApply(&edit, &mutex_);
     if(s.ok()){
@@ -1714,7 +1716,7 @@ Status DBImpl::WriteNVMTableToLevel0(chunkTable* cktbl,
                         std::vector<FileMetaData>& result_meta_list){
     const uint64_t start_micros = env_->NowMicros();
     Status s;
-    int sst_num = 0;
+    int sst_num = 0, hot_num = 0;
     TableBuilder* builder = nullptr;
     WritableFile* file = nullptr;
     FileMetaData meta;
@@ -1738,6 +1740,7 @@ Status DBImpl::WriteNVMTableToLevel0(chunkTable* cktbl,
             if(hot_bf_->CheckHot(user_key)){
                 DEBUG_T("in WriteNVMTableToLevel0, user_key:%s is check hot\n",
                         user_key.ToString().c_str());
+                hot_num++;
                 new_cktbl->Add(iter->GetNodeKey());
             }
             else{
@@ -1794,6 +1797,7 @@ Status DBImpl::WriteNVMTableToLevel0(chunkTable* cktbl,
             result_meta_list.push_back(meta); 
         }
     }
+    DEBUG_T("sst_num:%d, hot_num:%d\n", sst_num, hot_num);
 
     if(s.ok() && shutting_down_.Acquire_Load()){
         s = Status::IOError("Deleting DB during Compactnvmtable.....\n");

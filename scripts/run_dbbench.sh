@@ -3,23 +3,23 @@
 cat /dev/null > $NOVELSMSRC/mylog.txt
 
 NUMTHREAD=1
-BENCHMARKS="customed99hot1k_100k,\
-customed80hot1k_100k,\
-customeduniform1k_100k,\
-customed99hot4k_100k,\
-customed80hot4k_100k,\
-customeduniform4k_100k,\
-customed99hot1k_500k,\
-customed80hot1k_500k,\
-customeduniform1k_500k,\
-customed99hot4k_500k,\
-customed80hot4k_500k,\
-customeduniform4k_500k"
+#BENCHMARKS="customed99hot1k_100k,\
+#customed80hot1k_100k,\
+#customeduniform1k_100k,\
+#customed99hot4k_100k,\
+#customed80hot4k_100k,\
+#customeduniform4k_100k,\
+#customed99hot1k_500k,\
+#customed80hot1k_500k,\
+#customeduniform1k_500k,\
+#customed99hot4k_500k,\
+#customed80hot4k_500k,\
+#customeduniform4k_500k"
 
 #BENCHMARKS="customed99hot1k_100k"
 #BENCHMARKS="customed80hot1k_100k"
 #BENCHMARKS="customeduniform1k_100k"
-#BENCHMARKS="customed99hot4k_100k"
+BENCHMARKS="customed99hot4k_100k"
 #BENCHMARKS="customed80hot4k_100k"
 #BENCHMARKS="customeduniform4k_100k"
 #BENCHMARKS="customed99hot1k_500k"
