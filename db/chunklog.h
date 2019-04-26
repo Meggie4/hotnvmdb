@@ -18,6 +18,7 @@ namespace leveldb{
 class chunkLog{
     public:
         chunkLog(std::string* logfile, size_t logfile_size, bool recovery);
+        ~chunkLog();
         void* get_map_start(){return log_map_start_;}
         ///(TODO)offset
         void* get_current_ptr(){return log_current_ptr_;}
@@ -31,6 +32,7 @@ class chunkLog{
         void* log_map_start_;
         char* log_current_ptr_;
         int fd;
+        size_t filesize_;
         port::AtomicPointer nvm_usage_;
         size_t log_bytes_remaining_;
         chunkLog(const chunkLog&);

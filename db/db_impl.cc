@@ -129,6 +129,12 @@ Options SanitizeOptions(const std::string& dbname,
   ClipToRange(&result.write_buffer_size, 64<<10,                      1<<30);
   ClipToRange(&result.max_file_size,     1<<20,                       1<<30);
   ClipToRange(&result.block_size,        1<<10,                       4<<20);
+  
+  ////////////////meggie
+  ClipToRange(&result.chunk_index_size,  1<<20,                       1<<30);
+  ClipToRange(&result.chunk_log_size,    1<<20,                       1<<30);
+  ////////////////meggie
+  
   if (result.info_log == nullptr) {
     // Open a log file in the same directory as the db
     src.env->CreateDir(dbname);  // In case it does not exist
@@ -320,10 +326,10 @@ void DBImpl::DeleteObsoleteFiles() {
           break;
         ////////////////meggie
         case kCkgFile:
-          keep = (live.find(number) != live.end());
+          keep = (find(chunk_log_files_.begin(), chunk_log_files_.end(), number) != chunk_log_files_.end());
           break;
         case kIdxFile:
-          keep = (live.find(number) != live.end());
+          keep = (find(chunk_index_files_.begin(), chunk_index_files_.end(), number) != chunk_index_files_.end());
           break;
         ////////////////meggie
         case kDescriptorFile:
@@ -1603,16 +1609,17 @@ Status DBImpl::MakeRoomForImmu(bool force){
             } 
             start_timer(TOTAL_NVMTABLE_COMPACTION);
             int sz = to_compaction_list_.size();
+            DEBUG_T("to_compaction_list_, size:%d\n", sz);
             nvmcompact_struct nvmcompact[sz];
             start_timer(INIT_NVM_COMPACT);
             InitNVMCompact(to_compaction_list_, nvmcompact);
             record_timer(INIT_NVM_COMPACT);
             
-            DEBUG_T("before add job, sz:%d\n", sz);
+            DEBUG_T("before add all job, sz:%d\n", sz);
             start_timer(THPOOL_HANDLE_JOB);
             for(int i = 0; i < sz; i++){
-                DEBUG_T("have add job\n");
                 thpool_->AddJob(CompactNVMTable, &nvmcompact[i]);
+                DEBUG_T("have add job\n");
             }
             DEBUG_T("before wait\n");
             thpool_->WaitAll();
@@ -1643,15 +1650,20 @@ void DBImpl::InitNVMCompact(std::map<int, chunkTable*>& to_compaction_list,
     std::map<int, chunkTable*>::iterator iter = to_compaction_list.begin();
     int i = 0;
     int sstnum_of_chunk = 
-        options_.chunk_log_size / options_.write_buffer_size; 
+        options_.chunk_log_size / options_.write_buffer_size;
+    DEBUG_T("sstnum_of_chunk:%d\n", sstnum_of_chunk);
     for(; iter != to_compaction_list.end(); iter++, i++){
+        DEBUG_T("INIT_NVM_COMPACT:%d\n", i);
         nvmcompact[i].index = iter->first;
         nvmcompact[i].cktbl = iter->second;
+        DEBUG_T("CreateNewchunkTable, start\n");
         nvmcompact[i].new_cktbl = CreateNewchunkTable();
+        DEBUG_T("CreateNewchunkTable, end\n");
         nvmcompact[i].db = this;
         for(int j =0; j < sstnum_of_chunk; j++){
-            nvmcompact[i].reserved_file_numbers[j] = 
-                versions_->NewFileNumber();
+            int number = versions_->NewFileNumber();
+            nvmcompact[i].reserved_file_numbers.push_back(
+                versions_->NewFileNumber());
             pending_outputs_.insert(nvmcompact[i].reserved_file_numbers[j]);
         }
     }
@@ -1670,9 +1682,9 @@ Status DBImpl::FinishNVMTableCompaction(nvmcompact_struct* nvmcompact,
               const Slice min_user_key = meta.smallest.user_key();
               const Slice max_user_key = meta.largest.user_key();
               int level = 0;
-              if(base != nullptr)
+              /*if(base != nullptr)
                  level = base->PickLevelForMemTableOutput(min_user_key,
-                         max_user_key);
+                         max_user_key);*/
               edit.AddFile(level, meta.number, meta.file_size, 
                       meta.smallest, meta.largest);
             }
@@ -1747,7 +1759,8 @@ Status DBImpl::WriteNVMTableToLevel0(chunkTable* cktbl,
                 meta.largest.DecodeFrom(key);
                 builder->Add(key, iter->value());
                 sst_num++;
-                if(builder->FileSize() >= options_.write_buffer_size){
+                if(file_number_index < (num_reserved_files - 1) &&
+                        builder->FileSize() >= options_.write_buffer_size){
                    s = builder->Finish();
                    meta.file_size = builder->FileSize();
                    if(s.ok())

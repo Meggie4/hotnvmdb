@@ -62,7 +62,7 @@ class ThreadPool {
         
         // Get job from the queue
         if( !bailout ) {
-            DEBUG_T("have add job\n");
+            DEBUG_T("have get job from queue\n");
             res = queue.front();//获取第一个job
             queue.pop_front();//并将其从线程池中pop出去
         }

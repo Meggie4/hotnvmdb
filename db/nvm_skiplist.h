@@ -537,11 +537,11 @@ inline void SkipList<Key,Comparator>::Iterator::SetHead(void *ptr) {
                 Node* x;
                 Node* prev[kMaxHeight]; 
                 if(Contains(nvmkey, &x, prev)){
-                    DEBUG_T("it's update\n");
+                    //DEBUG_T("it's update\n");
                     x->key_offset = key_offset;
                 }
                 else{
-                    DEBUG_T("it's insert\n");
+                    //DEBUG_T("it's insert\n");
                     Insert(nvmkey, s, key_offset, x, prev); 
                 }
             }

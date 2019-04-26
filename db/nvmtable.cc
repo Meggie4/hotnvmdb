@@ -121,19 +121,16 @@ namespace leveldb{
         size_t kv_length;
         uint32_t key_length1;
         const char* key_ptr1 = GetVarint32Ptr(kvitem, kvitem + 5, &key_length1);
-        DEBUG_T("chuntable Add, user_key:%s, len:%d\n", Slice(key_ptr1, key_length1 - 8).ToString().c_str(), 
-               key_length1 - 8);
+        //DEBUG_T("chuntable Add, user_key:%s, len:%d\n", Slice(key_ptr1, key_length1 - 8).ToString().c_str(),key_length1 - 8);
         key_ptr = GetKVLength(kvitem, &key_length, &kv_length);
-        //Slice nvmkey = Slice(key_ptr, key_length); 
         
         uint64_t tag = DecodeFixed64(key_ptr + key_length - 8);
-        //ValueType type = static_cast<ValueType>(tag & 0xff);
         SequenceNumber s = tag >> 8;
-        DEBUG_T("before add to chunklog\n");
+        //DEBUG_T("before add to chunklog\n");
         const char* kv_offset = reinterpret_cast<char*>(cklog_->insert(kvitem, kv_length));
-        DEBUG_T("chunktable,add kvoffset：%p\n", kv_offset);
+        //DEBUG_T("chunktable,add kvoffset：%p\n", kv_offset);
         table_.Add(kvitem, kv_offset, s); 
-        DEBUG_T("after add to chunktable\n");
+        //DEBUG_T("after add to chunktable\n");
         bbf_->Add(Slice(key_ptr1, key_length1 - 8));
     }
 
@@ -366,7 +363,7 @@ namespace leveldb{
     
     void NVMTable::RecoverMetadata(std::map<int, chunkTable*> update_chunks, 
             std::string metafile){
-        DEBUG_T("recover metafile:%s\n", metafile.c_str());
+        //DEBUG_T("recover metafile:%s\n", metafile.c_str());
         int fd = open(metafile.c_str(), O_RDWR);
         if(fd == -1){
             fd = open(metafile.c_str(), O_RDWR | O_CREAT, 0644);
@@ -380,9 +377,9 @@ namespace leveldb{
         }
         char* meta_map_start = (char*)mmap(NULL, metfile_size, PROT_READ | PROT_WRITE, 
                         MAP_SHARED, fd, 0); 
-        DEBUG_T("BIT_BLOOM_SIZE:%d, bytes:%zu, kNumChunkTable:%d, metfile_size:%zu\n", BIT_BLOOM_SIZE, bytes, kNumChunkTable, metfile_size);
+        //DEBUG_T("BIT_BLOOM_SIZE:%d, bytes:%zu, kNumChunkTable:%d, metfile_size:%zu\n", BIT_BLOOM_SIZE, bytes, kNumChunkTable, metfile_size);
         for(auto iter = update_chunks.begin(); iter != update_chunks.end(); iter++){
-            DEBUG_T("iter->first:%d\n", iter->first);
+            //DEBUG_T("iter->first:%d\n", iter->first);
             char* start = meta_map_start + (bytes + 1) * (iter->first);
             iter->second->RecoverBloomFilter(start);
         }

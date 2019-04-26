@@ -682,7 +682,7 @@ class Benchmark {
         entries_per_batch_ = 1000;
         fresh_db = true;
         method = &Benchmark::Customed80hot1k_100k;
-      } else if(name == Slice("customedworkloaduniform1k_100k")) {
+      } else if(name == Slice("customeduniform1k_100k")) {
         entries_per_batch_ = 1000;
         fresh_db = true;
         method = &Benchmark::CustomedWorkloadUniform1k_100k;
@@ -695,7 +695,7 @@ class Benchmark {
         entries_per_batch_ = 1000;
         fresh_db = true;
         method = &Benchmark::Customed80hot4k_100k;
-      } else if(name == Slice("customedworkloaduniform4k_100k")) {
+      } else if(name == Slice("customeduniform4k_100k")) {
         entries_per_batch_ = 1000;
         fresh_db = true;
         method = &Benchmark::CustomedWorkloadUniform4k_100k;
@@ -709,7 +709,7 @@ class Benchmark {
         entries_per_batch_ = 1000;
         fresh_db = true;
         method = &Benchmark::Customed80hot1k_500k;
-      } else if(name == Slice("customedworkloaduniform1k_500k")) {
+      } else if(name == Slice("customeduniform1k_500k")) {
         entries_per_batch_ = 1000;
         fresh_db = true;
         method = &Benchmark::CustomedWorkloadUniform1k_500k;
@@ -722,7 +722,7 @@ class Benchmark {
         entries_per_batch_ = 1000;
         fresh_db = true;
         method = &Benchmark::Customed80hot4k_500k;
-      } else if(name == Slice("customedworkloaduniform4k_500k")) {
+      } else if(name == Slice("customeduniform4k_500k")) {
         entries_per_batch_ = 1000;
         fresh_db = true;
         method = &Benchmark::CustomedWorkloadUniform4k_500k;

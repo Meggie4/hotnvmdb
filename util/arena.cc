@@ -33,23 +33,22 @@ Arena::Arena()
 
 
 Arena::~Arena() {
-    //DEBUG_T("start, blocks.size():%d\n", blocks_.size());
-    for (size_t i = 0; i < blocks_.size(); i++) {
-        if(this->nvmarena_ == true) {
-            //DEBUG_T("start, kSize%zu, MEM_THRESH:%f, kNVMBlockSize:%lu\n", 
-                    //kSize, MEM_THRESH, MEM_THRESH*kNVMBlockSize);
-            //if(blocks_[i] == NULL)
-                //DEBUG_T("blocks is null\n");
-            munmap(blocks_[i], kSize);
-            blocks_[i] = NULL;
-        }
-        else
-            delete[] blocks_[i];
+    if(this->nvmarena_ == true){
+
     }
-    //DEBUG_T("before close fd\n");
-    if (fd != -1)
-        close(fd);
-    //DEBUG_T("end\n");
+    else{
+        for (size_t i = 0; i < blocks_.size(); i++) {
+            if(this->nvmarena_ == true) {
+                DEBUG_T("have_delete_ArenaNVM, in ~Arena\n");
+                munmap(blocks_[i], kSize);
+                blocks_[i] = NULL;
+            }
+            else 
+                delete[] blocks_[i];
+        }
+        if (fd != -1)
+            close(fd);
+    }
 }
 
 void* Arena:: operator new(size_t size)
@@ -182,6 +181,8 @@ ArenaNVM::~ArenaNVM() {
     for (size_t i = 0; i < blocks_.size(); i++) {
         assert(i <= 1);
         munmap(blocks_[i], kSize);
+        //blocks_[i] = nullptr;
+        DEBUG_T("have delete_ArenaNVM in ~ArenaNVM\n");
     }
     close(fd);
 }
