@@ -918,10 +918,9 @@ Status VersionSet::LogAndApply(VersionEdit* edit, port::Mutex* mu) {
                                 edit->chunkindex_files_.end()); 
        chunklog_files_.assign(edit->chunklog_files_.begin(), 
                                 edit->chunklog_files_.end()); 
-       for(int i = 0; i < chunkindex_files_.size(); i++){
-            DEBUG_T("logandapply, chunkindex_filenumber:%lu, chunkLogFilenumber:%lu\n",
-                chunkindex_files_[i], chunklog_files_[i]);
-       }
+       //for(int i = 0; i < chunkindex_files_.size(); i++){
+            //DEBUG_T("logandapply, chunkindex_filenumber:%lu, chunkLogFilenumber:%lu\n",chunkindex_files_[i], chunklog_files_[i]);
+       //}
     }
 
     if(edit->has_meta_number_)

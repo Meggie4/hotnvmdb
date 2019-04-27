@@ -542,7 +542,9 @@ Status DBImpl::RecoverLogFile(uint64_t log_number, bool last_log,
       mem = new MemTable(internal_comparator_);
       mem->Ref();
     }
-    status = WriteBatchInternal::InsertInto(&batch, mem);
+    ////////////////meggie
+    status = WriteBatchInternal::InsertInto(&batch, mem, hot_bf_);
+    ////////////////meggie
     MaybeIgnoreError(&status);
     if (!status.ok()) {
       break;
@@ -1404,7 +1406,9 @@ Status DBImpl::Write(const WriteOptions& options, WriteBatch* my_batch) {
         }
       }
       if (status.ok()) {
-        status = WriteBatchInternal::InsertInto(updates, mem_);
+        ////////////////meggie
+        status = WriteBatchInternal::InsertInto(updates, mem_, hot_bf_);
+        ////////////////meggie
       }
       mutex_.Lock();
       if (sync_error) {
@@ -1570,7 +1574,7 @@ void DBImpl::MovetoNVMTable(){
          count++;
       }
     }
-    //Log(options_.info_log, "after MovetoNVMTable, drop_count:%d, nvm usage:%lu\n", drop_count, nvmtbl_->ApproximateMemoryUsage());
+    DEBUG_T("after MovetoNVMTable, drop_count:%d, nvm usage:%lu\n", drop_count, nvmtbl_->ApproximateMemoryUsage());
     delete iter;
     VersionEdit edit;
     edit.SetPrevLogNumber(0);
@@ -1738,8 +1742,7 @@ Status DBImpl::WriteNVMTableToLevel0(chunkTable* cktbl,
             Slice user_key(key.data(), key.size() - 8);
             char* number = const_cast<char*>(user_key.ToString().c_str()) + 3;
             if(hot_bf_->CheckHot(user_key)){
-                DEBUG_T("in WriteNVMTableToLevel0, user_key:%s is check hot\n",
-                        user_key.ToString().c_str());
+                //DEBUG_T("in WriteNVMTableToLevel0, user_key:%s is check hot\n",user_key.ToString().c_str());
                 hot_num++;
                 new_cktbl->Add(iter->GetNodeKey());
             }
