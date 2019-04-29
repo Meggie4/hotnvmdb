@@ -119,28 +119,12 @@ db/skiplist.h
 ../db/db/skiplist.h
 util/arena.h
 ../db/util/arena.h
+util/BloomFilter.h
+../db/util/BloomFilter.h
 string
 -
-map
+unordered_set
 -
-
-..//db/nvm_skiplist.h
-string
--
-assert.h
--
-stdlib.h
--
-port/port.h
-../db/port/port.h
-util/arena.h
-../db/util/arena.h
-util/random.h
-../db/util/random.h
-port/cache_flush.h
-../db/port/cache_flush.h
-db/chunklog.h
-../db/db/chunklog.h
 util/debug.h
 ../db/util/debug.h
 
@@ -157,10 +141,6 @@ leveldb/db.h
 ../db/leveldb/db.h
 db/dbformat.h
 ../db/db/dbformat.h
-db/nvm_skiplist.h
-../db/db/nvm_skiplist.h
-db/chunklog.h
-../db/db/chunklog.h
 util/arena.h
 ../db/util/arena.h
 port/port.h
@@ -169,6 +149,8 @@ util/hash.h
 ../db/util/hash.h
 table/merger.h
 ../db/table/merger.h
+db/memtable.h
+../db/db/memtable.h
 
 ..//db/nvmwrite_batch_internal.h
 db/dbformat.h
@@ -187,6 +169,8 @@ util/arena.h
 ../db/util/arena.h
 util/random.h
 ../db/util/random.h
+port/cache_flush.h
+../db/port/cache_flush.h
 
 ..//db/snapshot.h
 db/dbformat.h
@@ -353,6 +337,14 @@ leveldb/slice.h
 ..//table/two_level_iterator.h
 leveldb/iterator.h
 ../table/leveldb/iterator.h
+
+..//util/BloomFilter.h
+stdlib.h
+-
+vector
+-
+stdint.h
+-
 
 ..//util/MurmurHash3.h
 stdint.h
@@ -901,6 +893,18 @@ leveldb/iterator.h
 /home/meggie/文档/hotnvmdb/db/leveldb/iterator.h
 util/coding.h
 /home/meggie/文档/hotnvmdb/db/util/coding.h
+db/skiplist.h
+/home/meggie/文档/hotnvmdb/db/db/skiplist.h
+port/cache_flush.h
+/home/meggie/文档/hotnvmdb/db/port/cache_flush.h
+cstdio
+-
+gnuwrapper.h
+-
+string
+-
+unordered_set
+-
 util/debug.h
 /home/meggie/文档/hotnvmdb/db/util/debug.h
 
@@ -1203,6 +1207,36 @@ table/format.h
 /home/meggie/文档/hotnvmdb/table/table/format.h
 table/iterator_wrapper.h
 /home/meggie/文档/hotnvmdb/table/table/iterator_wrapper.h
+
+/home/meggie/文档/hotnvmdb/util/BloomFilter.cc
+BloomFilter.h
+/home/meggie/文档/hotnvmdb/util/BloomFilter.h
+MurmurHash3.h
+/home/meggie/文档/hotnvmdb/util/MurmurHash3.h
+algorithm
+-
+set
+-
+string
+-
+stdint.h
+-
+stdio.h
+-
+vector
+-
+iostream
+-
+array
+-
+
+/home/meggie/文档/hotnvmdb/util/BloomFilter.h
+stdlib.h
+-
+vector
+-
+stdint.h
+-
 
 /home/meggie/文档/hotnvmdb/util/MurmurHash3.cc
 MurmurHash3.h

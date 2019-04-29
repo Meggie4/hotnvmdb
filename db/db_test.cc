@@ -1049,8 +1049,7 @@ static std::string Key(int i) {
 TEST(DBTest, MinorCompactionsHappen) {
   Options options = CurrentOptions();
   options.write_buffer_size = 10000;
-  options.chunk_index_size = 1000;
-  options.chunk_log_size = 20000;
+  options.chunk_size = 1000;
   Reopen(&options);
 
   const int N = 500;

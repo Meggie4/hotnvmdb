@@ -96,8 +96,7 @@ static bool FLAGS_histogram = false;
 static int FLAGS_write_buffer_size = 0;
 
 ////////////meggie
-static int FLAGS_nvm_index_size = 0;
-static int FLAGS_nvm_log_size = 0;
+static int FLAGS_nvm_chunk_size = 0;
 ////////////meggie
 
 // Number of bytes written to each file.
@@ -777,7 +776,7 @@ class Benchmark {
         RunBenchmark(num_threads, name, method);
       }
       ////////////meggie
-      //db_->PrintTimerAudit();
+      db_->PrintTimerAudit();
       ////////////meggie
     }
   }
@@ -945,8 +944,7 @@ class Benchmark {
     options.block_cache = cache_;
     options.write_buffer_size = FLAGS_write_buffer_size;
     /////////////////meggie
-    options.chunk_index_size = FLAGS_nvm_index_size;
-    options.chunk_log_size = FLAGS_nvm_log_size;
+    options.chunk_size = FLAGS_nvm_chunk_size;
     /////////////////meggie
     options.max_file_size = FLAGS_max_file_size;
     options.block_size = FLAGS_block_size;
@@ -1243,7 +1241,7 @@ class Benchmark {
 
   ///for 4k
   void Customed99hot4k_1000k(ThreadState* thread){
-      std::string fname = "/mnt/workloads/hot1_99/runwrite4k_1000K.txt"; 
+      std::string fname = "/mnt/workloads/hot1_99/runwrite4k_1000k.txt"; 
       CustomedWorkloadWrite(thread, fname);
   }
  
@@ -1370,8 +1368,7 @@ class Benchmark {
 int main(int argc, char** argv) {
   FLAGS_write_buffer_size = leveldb::Options().write_buffer_size;
   ////////////meggie
-  FLAGS_nvm_index_size = leveldb::Options().chunk_index_size;
-  FLAGS_nvm_log_size = leveldb::Options().chunk_log_size;
+  FLAGS_nvm_chunk_size = leveldb::Options().chunk_size;
   ////////////meggie
   FLAGS_max_file_size = leveldb::Options().max_file_size;
   FLAGS_block_size = leveldb::Options().block_size;
@@ -1406,10 +1403,8 @@ int main(int argc, char** argv) {
     } else if (sscanf(argv[i], "--write_buffer_size=%d%c", &n, &junk) == 1) {
       FLAGS_write_buffer_size = n * 1024L * 1024L;
     /////////////////meggie
-    } else if (sscanf(argv[i], "--nvm_index_size=%d%c", &n, &junk) == 1){
-      FLAGS_nvm_index_size = n * 1024L * 1024L;
-    } else if (sscanf(argv[i], "--nvm_log_size=%d%c", &n, &junk) == 1){
-      FLAGS_nvm_log_size = n * 1024L * 1024L;
+    } else if (sscanf(argv[i], "--nvm_chunk_size=%d%c", &n, &junk) == 1){
+      FLAGS_nvm_chunk_size = n * 1024L * 1024L;
     /////////////////meggie
     } else if (sscanf(argv[i], "--max_file_size=%d%c", &n, &junk) == 1) {
       FLAGS_max_file_size = n;

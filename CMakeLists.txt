@@ -19,6 +19,14 @@ option(LEVELDB_BUILD_TESTS "Build LevelDB's unit tests" ON)
 option(LEVELDB_BUILD_BENCHMARKS "Build LevelDB's benchmarks" ON)
 option(LEVELDB_INSTALL "Install LevelDB's header and library" ON)
 ##############meggie
+option(USE_OFFSETS "Define macro" ON)
+if(USE_OFFSETS)
+    ADD_DEFINITIONS(-DUSE_OFFSETS)
+endif(USE_OFFSETS)
+option(ENABLE_RECOVERY "Define macro" ON)
+if(ENABLE_RECOVERY)
+    ADD_DEFINITIONS(-DENABLE_RECOVERY)
+endif(ENABLE_RECOVERY)
 #option(USE_ARENA2_ALLOC "Define macro" OFF)
 #if(USE_ARENA2_ALLOC)
 #  ADD_DEFINITIONS(-D_USE_ARENA2_ALLOC)
@@ -201,6 +209,8 @@ target_sources(leveldb
     "${PROJECT_SOURCE_DIR}/util/bitops.h"
     "${PROJECT_SOURCE_DIR}/util/threadpool.h"
     "${PROJECT_SOURCE_DIR}/util/timer.h"
+    "${PROJECT_SOURCE_DIR}/util/BloomFilter.cc"
+    "${PROJECT_SOURCE_DIR}/util/BloomFilter.h"
     ######################meggie
 
   # Only CMake 3.3+ supports PUBLIC sources in targets exported by "install".
@@ -347,19 +357,19 @@ if(LEVELDB_BUILD_TESTS)
     leveldb_test("${PROJECT_SOURCE_DIR}/db/filename_test.cc")
     leveldb_test("${PROJECT_SOURCE_DIR}/db/log_test.cc")
     leveldb_test("${PROJECT_SOURCE_DIR}/db/recovery_test.cc")
-    leveldb_test("${PROJECT_SOURCE_DIR}/db/skiplist_test.cc")
+    #leveldb_test("${PROJECT_SOURCE_DIR}/db/skiplist_test.cc")
 
     ######################meggie
-    leveldb_test("${PROJECT_SOURCE_DIR}/db/chunklog_test.cc")
+    #leveldb_test("${PROJECT_SOURCE_DIR}/db/chunklog_test.cc")
     #leveldb_test("${PROJECT_SOURCE_DIR}/db/nvmskiplist_test.cc")
     ######################meggie
     leveldb_test("${PROJECT_SOURCE_DIR}/db/version_edit_test.cc")
     leveldb_test("${PROJECT_SOURCE_DIR}/db/version_set_test.cc")
     leveldb_test("${PROJECT_SOURCE_DIR}/db/write_batch_test.cc")
     ######################meggie
-    leveldb_test("${PROJECT_SOURCE_DIR}/db/nvmwrite_batch_test.cc")
-    leveldb_test("${PROJECT_SOURCE_DIR}/db/chunktable_test.cc")
-    leveldb_test("${PROJECT_SOURCE_DIR}/db/nvmtable_test.cc")
+    #leveldb_test("${PROJECT_SOURCE_DIR}/db/nvmwrite_batch_test.cc")
+    #leveldb_test("${PROJECT_SOURCE_DIR}/db/chunktable_test.cc")
+    #leveldb_test("${PROJECT_SOURCE_DIR}/db/nvmtable_test.cc")
     ######################meggie
 
     leveldb_test("${PROJECT_SOURCE_DIR}/helpers/memenv/memenv_test.cc")
@@ -367,7 +377,7 @@ if(LEVELDB_BUILD_TESTS)
     leveldb_test("${PROJECT_SOURCE_DIR}/table/filter_block_test.cc")
     leveldb_test("${PROJECT_SOURCE_DIR}/table/table_test.cc")
 
-    leveldb_test("${PROJECT_SOURCE_DIR}/util/arena_test.cc")
+    #leveldb_test("${PROJECT_SOURCE_DIR}/util/arena_test.cc")
     leveldb_test("${PROJECT_SOURCE_DIR}/util/bloom_test.cc")
     leveldb_test("${PROJECT_SOURCE_DIR}/util/cache_test.cc")
     leveldb_test("${PROJECT_SOURCE_DIR}/util/coding_test.cc")

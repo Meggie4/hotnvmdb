@@ -6,5 +6,4 @@ export TEST_MEMDIR=/mnt/pmemdir
 #DRAM buffer size in MB
 export DRAMBUFFSZ=4
 #NVM buffer size in MB
-export NVMINDEXSZ=4
-export NVMLOGSZ=20
+export NVMCHUNKSZ=32

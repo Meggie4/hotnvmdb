@@ -30,14 +30,9 @@ std::string LogFileName(const std::string& dbname, uint64_t number) {
 }
 
 ///////////////////////meggie
-std::string chunkLogFileName(const std::string& dbname, uint64_t number) {
+std::string chunkFileName(const std::string& dbname, uint64_t number) {
   assert(number > 0);
-  return MakeFileName(dbname, number, "ckg");
-}
-
-std::string chunkIndexFileName(const std::string& dbname, uint64_t number) {
-  assert(number > 0);
-  return MakeFileName(dbname, number, "idx");
+  return MakeFileName(dbname, number, "cnk");
 }
 
 std::string chunkMetaFileName(const std::string& dbname, uint64_t number){
@@ -134,11 +129,8 @@ bool ParseFileName(const std::string& filename,
       *type = kTempFile;
     } 
     //////////////////meggie
-    else if(suffix == Slice(".ckg")){
-      *type = kCkgFile;
-    }
-    else if(suffix == Slice(".idx")){
-      *type = kIdxFile;
+    else if(suffix == Slice(".cnk")){
+      *type = kChunkFile;
     }
     //////////////////meggie
     else {

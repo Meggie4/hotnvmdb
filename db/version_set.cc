@@ -807,8 +807,7 @@ VersionSet::VersionSet(const std::string& dbname,
     {
   AppendVersion(new Version(this));
   ///////////////meggie
-  chunkindex_files_.resize(kNumChunkTable);
-  chunklog_files_.resize(kNumChunkTable);
+  chunk_files_.resize(kNumChunkTable);
   ///////////////meggie
 }
 
@@ -914,10 +913,8 @@ Status VersionSet::LogAndApply(VersionEdit* edit, port::Mutex* mu) {
     prev_log_number_ = edit->prev_log_number_;
     ///////////////meggie
     if(edit->has_updated_chunk_){
-       chunkindex_files_.assign(edit->chunkindex_files_.begin(), 
-                                edit->chunkindex_files_.end()); 
-       chunklog_files_.assign(edit->chunklog_files_.begin(), 
-                                edit->chunklog_files_.end()); 
+       chunk_files_.assign(edit->chunk_files_.begin(), 
+                                edit->chunk_files_.end()); 
        //for(int i = 0; i < chunkindex_files_.size(); i++){
             //DEBUG_T("logandapply, chunkindex_filenumber:%lu, chunkLogFilenumber:%lu\n",chunkindex_files_[i], chunklog_files_[i]);
        //}
@@ -977,8 +974,7 @@ Status VersionSet::Recover(bool *save_manifest) {
   bool have_next_file = false;
   bool have_last_sequence = false;
   /////////////meggie
-  std::vector<uint64_t> chunkindex_files;
-  std::vector<uint64_t> chunklog_files;
+  std::vector<uint64_t> chunk_files;
   /////////////meggie
   uint64_t next_file = 0;
   uint64_t last_sequence = 0;
@@ -1038,10 +1034,8 @@ Status VersionSet::Recover(bool *save_manifest) {
       }
       /////////////meggie
       if(edit.has_updated_chunk_){
-          chunkindex_files.assign(edit.chunkindex_files_.begin(), 
-                  edit.chunkindex_files_.end());           
-          chunklog_files.assign(edit.chunklog_files_.begin(), 
-                  edit.chunklog_files_.end());           
+          chunk_files.assign(edit.chunk_files_.begin(), 
+                  edit.chunk_files_.end());           
       }
       
       if(edit.has_meta_number_){
@@ -1083,8 +1077,7 @@ Status VersionSet::Recover(bool *save_manifest) {
     log_number_ = log_number;
     prev_log_number_ = prev_log_number;
     ////////////////////meggie
-    chunkindex_files_.assign(chunkindex_files.begin(), chunkindex_files.end());
-    chunklog_files_.assign(chunklog_files.begin(), chunklog_files.end());
+    chunk_files_.assign(chunk_files.begin(), chunk_files.end());
     ////////////////////meggie
 
     // See if we can reuse the existing MANIFEST file.
@@ -1266,18 +1259,16 @@ void VersionSet::AddLiveFiles(std::set<uint64_t>* live) {
   }
 }
 ////////////////////meggie
-void VersionSet::AddChunkFiles(std::vector<uint64_t>* chunkindex_files, 
-        std::vector<uint64_t>* chunklog_files,
+void VersionSet::AddChunkFiles(std::vector<uint64_t>* chunk_files, 
         uint64_t* chunkmeta_file){
-    chunkindex_files->assign(chunkindex_files_.begin(), chunkindex_files_.end());
-    chunklog_files->assign(chunklog_files_.begin(), chunklog_files_.end());
+    chunk_files->assign(chunk_files_.begin(), chunk_files_.end());
     *chunkmeta_file = chunkmeta_file_;
 }
 
 void VersionSet::PrintChunkFiles(){
-    for(int i = 0; i < chunkindex_files_.size(); i++){
-        DEBUG_T("versionset, PrintChunkFiles, chunkindex_filenumber:%lu, chunkLogFilenumber:%lu\n",
-            chunkindex_files_[i], chunklog_files_[i]);
+    for(int i = 0; i < chunk_files_.size(); i++){
+        DEBUG_T("versionset, PrintChunkFiles, chunk_filenumber:%lu\n",
+            chunk_files_[i]);
     }
 }
 ////////////////////meggie

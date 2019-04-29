@@ -82,12 +82,10 @@ class VersionEdit {
   std::string DebugString() const;
 
   ///////////////////meggie
-  void update_chunkfiles(std::vector<uint64_t>& newest_chunkindex_files,
-                        std::vector<uint64_t>& newest_chunklog_files){
+  void update_chunkfiles(std::vector<uint64_t>& newest_chunk_files){
       has_updated_chunk_ = true;
-      for(int i = 0; i < newest_chunkindex_files.size(); i++){
-          chunkindex_files_[i] = newest_chunkindex_files[i];
-          chunklog_files_[i] = newest_chunklog_files[i];
+      for(int i = 0; i < newest_chunk_files.size(); i++){
+          chunk_files_[i] = newest_chunk_files[i];
       }
   }
   void SetMetaNumber(uint64_t num) {
@@ -117,8 +115,7 @@ class VersionEdit {
   std::vector< std::pair<int, FileMetaData> > new_files_;
 
   //////////////////meggie
-  std::vector<uint64_t> chunkindex_files_; 
-  std::vector<uint64_t> chunklog_files_;
+  std::vector<uint64_t> chunk_files_; 
   bool has_updated_chunk_;
   uint64_t chunkmeta_file_;
   bool has_meta_number_;

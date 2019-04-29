@@ -26,8 +26,7 @@ enum FileType {
   kTempFile,
   kInfoLogFile,  // Either the current one, or an old one
   ///////////////////meggie
-  kCkgFile,
-  kIdxFile,
+  kChunkFile,
   kMetaFile,
   ///////////////////meggie
 };
@@ -38,8 +37,7 @@ enum FileType {
 std::string LogFileName(const std::string& dbname, uint64_t number);
 
 ///////////////////////meggie
-std::string chunkLogFileName(const std::string& name, uint64_t number);
-std::string chunkIndexFileName(const std::string& name, uint64_t number);
+std::string chunkFileName(const std::string& name, uint64_t number);
 std::string chunkMetaFileName(const std::string& name, uint64_t number);
 ///////////////////////meggie
 // Return the name of the sstable with the specified number

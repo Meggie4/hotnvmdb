@@ -33,22 +33,18 @@ Arena::Arena()
 
 
 Arena::~Arena() {
-    if(this->nvmarena_ == true){
-
-    }
-    else{
-        for (size_t i = 0; i < blocks_.size(); i++) {
-            if(this->nvmarena_ == true) {
-                DEBUG_T("have_delete_ArenaNVM, in ~Arena\n");
-                munmap(blocks_[i], kSize);
-                blocks_[i] = NULL;
-            }
-            else 
-                delete[] blocks_[i];
+    for (size_t i = 0; i < blocks_.size(); i++) {
+        if(this->nvmarena_ == true) {
+            DEBUG_T("have_delete_ArenaNVM, in ~Arena\n");
+            munmap(blocks_[i], kSize);
+            DEBUG_T("munmap:%zu\n", kSize);
+            blocks_[i] = NULL;
         }
-        if (fd != -1)
-            close(fd);
+        else 
+            delete[] blocks_[i];
     }
+    if (fd != -1)
+        close(fd);
 }
 
 void* Arena:: operator new(size_t size)
@@ -214,6 +210,7 @@ char* ArenaNVM::AllocateNVMBlock(size_t block_bytes) {
         return NULL;
     }
 
+    DEBUG_T("mmap:%zu\n", MEM_THRESH * block_bytes);
     char *result = (char *)mmap(NULL, MEM_THRESH * block_bytes, PROT_READ|PROT_WRITE, MAP_SHARED, fd, 0);
 
     /*if(result == NULL)

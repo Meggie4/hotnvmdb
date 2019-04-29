@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/meggie/文档/hotnvmdb/build
 CMakeFiles/db_bench.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/db_bench.dir/build.make CMakeFiles/db_bench.dir/depend
 	$(MAKE) -f CMakeFiles/db_bench.dir/build.make CMakeFiles/db_bench.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=22,23 "Built target db_bench"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=17,18,19 "Built target db_bench"
 .PHONY : CMakeFiles/db_bench.dir/all
 
 # Include target in all.
@@ -76,7 +76,7 @@ all: CMakeFiles/db_bench.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/db_bench.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 32
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/db_bench.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/db_bench.dir/rule
@@ -103,7 +103,7 @@ clean: CMakeFiles/db_bench.dir/clean
 CMakeFiles/env_posix_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/env_posix_test.dir/build.make CMakeFiles/env_posix_test.dir/depend
 	$(MAKE) -f CMakeFiles/env_posix_test.dir/build.make CMakeFiles/env_posix_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=28,29,30 "Built target env_posix_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=25,26 "Built target env_posix_test"
 .PHONY : CMakeFiles/env_posix_test.dir/all
 
 # Include target in all.
@@ -113,7 +113,7 @@ all: CMakeFiles/env_posix_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/env_posix_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/env_posix_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/env_posix_test.dir/rule
@@ -140,7 +140,7 @@ clean: CMakeFiles/env_posix_test.dir/clean
 CMakeFiles/multi_bloomfilter_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/multi_bloomfilter_test.dir/build.make CMakeFiles/multi_bloomfilter_test.dir/depend
 	$(MAKE) -f CMakeFiles/multi_bloomfilter_test.dir/build.make CMakeFiles/multi_bloomfilter_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=77,78 "Built target multi_bloomfilter_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=81,82,83 "Built target multi_bloomfilter_test"
 .PHONY : CMakeFiles/multi_bloomfilter_test.dir/all
 
 # Include target in all.
@@ -150,7 +150,7 @@ all: CMakeFiles/multi_bloomfilter_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/multi_bloomfilter_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 32
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/multi_bloomfilter_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/multi_bloomfilter_test.dir/rule
@@ -177,7 +177,7 @@ clean: CMakeFiles/multi_bloomfilter_test.dir/clean
 CMakeFiles/logging_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/logging_test.dir/build.make CMakeFiles/logging_test.dir/depend
 	$(MAKE) -f CMakeFiles/logging_test.dir/build.make CMakeFiles/logging_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=73,74 "Built target logging_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=77,78 "Built target logging_test"
 .PHONY : CMakeFiles/logging_test.dir/all
 
 # Include target in all.
@@ -187,7 +187,7 @@ all: CMakeFiles/logging_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/logging_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/logging_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/logging_test.dir/rule
@@ -214,7 +214,7 @@ clean: CMakeFiles/logging_test.dir/clean
 CMakeFiles/hash_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/hash_test.dir/build.make CMakeFiles/hash_test.dir/depend
 	$(MAKE) -f CMakeFiles/hash_test.dir/build.make CMakeFiles/hash_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=39,40 "Built target hash_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=37,38 "Built target hash_test"
 .PHONY : CMakeFiles/hash_test.dir/all
 
 # Include target in all.
@@ -224,7 +224,7 @@ all: CMakeFiles/hash_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/hash_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/hash_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/hash_test.dir/rule
@@ -251,7 +251,7 @@ clean: CMakeFiles/hash_test.dir/clean
 CMakeFiles/coding_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/coding_test.dir/build.make CMakeFiles/coding_test.dir/depend
 	$(MAKE) -f CMakeFiles/coding_test.dir/build.make CMakeFiles/coding_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=15,16 "Built target coding_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=10,11 "Built target coding_test"
 .PHONY : CMakeFiles/coding_test.dir/all
 
 # Include target in all.
@@ -261,7 +261,7 @@ all: CMakeFiles/coding_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/coding_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/coding_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/coding_test.dir/rule
@@ -282,13 +282,87 @@ clean: CMakeFiles/coding_test.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/crc32c_test.dir
+
+# All Build rule for target.
+CMakeFiles/crc32c_test.dir/all: CMakeFiles/leveldb.dir/all
+	$(MAKE) -f CMakeFiles/crc32c_test.dir/build.make CMakeFiles/crc32c_test.dir/depend
+	$(MAKE) -f CMakeFiles/crc32c_test.dir/build.make CMakeFiles/crc32c_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=15,16 "Built target crc32c_test"
+.PHONY : CMakeFiles/crc32c_test.dir/all
+
+# Include target in all.
+all: CMakeFiles/crc32c_test.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/crc32c_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 31
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/crc32c_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
+.PHONY : CMakeFiles/crc32c_test.dir/rule
+
+# Convenience name for target.
+crc32c_test: CMakeFiles/crc32c_test.dir/rule
+
+.PHONY : crc32c_test
+
+# clean rule for target.
+CMakeFiles/crc32c_test.dir/clean:
+	$(MAKE) -f CMakeFiles/crc32c_test.dir/build.make CMakeFiles/crc32c_test.dir/clean
+.PHONY : CMakeFiles/crc32c_test.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/crc32c_test.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/cache_test.dir
+
+# All Build rule for target.
+CMakeFiles/cache_test.dir/all: CMakeFiles/leveldb.dir/all
+	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/depend
+	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=8,9 "Built target cache_test"
+.PHONY : CMakeFiles/cache_test.dir/all
+
+# Include target in all.
+all: CMakeFiles/cache_test.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/cache_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 31
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cache_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
+.PHONY : CMakeFiles/cache_test.dir/rule
+
+# Convenience name for target.
+cache_test: CMakeFiles/cache_test.dir/rule
+
+.PHONY : cache_test
+
+# clean rule for target.
+CMakeFiles/cache_test.dir/clean:
+	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/clean
+.PHONY : CMakeFiles/cache_test.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/cache_test.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/bloom_test.dir
 
 # All Build rule for target.
 CMakeFiles/bloom_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/bloom_test.dir/build.make CMakeFiles/bloom_test.dir/depend
 	$(MAKE) -f CMakeFiles/bloom_test.dir/build.make CMakeFiles/bloom_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=5,6 "Built target bloom_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=3,4 "Built target bloom_test"
 .PHONY : CMakeFiles/bloom_test.dir/all
 
 # Include target in all.
@@ -298,7 +372,7 @@ all: CMakeFiles/bloom_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/bloom_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/bloom_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/bloom_test.dir/rule
@@ -319,124 +393,13 @@ clean: CMakeFiles/bloom_test.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/arena_test.dir
-
-# All Build rule for target.
-CMakeFiles/arena_test.dir/all: CMakeFiles/leveldb.dir/all
-	$(MAKE) -f CMakeFiles/arena_test.dir/build.make CMakeFiles/arena_test.dir/depend
-	$(MAKE) -f CMakeFiles/arena_test.dir/build.make CMakeFiles/arena_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=1,2 "Built target arena_test"
-.PHONY : CMakeFiles/arena_test.dir/all
-
-# Include target in all.
-all: CMakeFiles/arena_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/arena_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/arena_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
-.PHONY : CMakeFiles/arena_test.dir/rule
-
-# Convenience name for target.
-arena_test: CMakeFiles/arena_test.dir/rule
-
-.PHONY : arena_test
-
-# clean rule for target.
-CMakeFiles/arena_test.dir/clean:
-	$(MAKE) -f CMakeFiles/arena_test.dir/build.make CMakeFiles/arena_test.dir/clean
-.PHONY : CMakeFiles/arena_test.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/arena_test.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/nvmtable_test.dir
-
-# All Build rule for target.
-CMakeFiles/nvmtable_test.dir/all: CMakeFiles/leveldb.dir/all
-	$(MAKE) -f CMakeFiles/nvmtable_test.dir/build.make CMakeFiles/nvmtable_test.dir/depend
-	$(MAKE) -f CMakeFiles/nvmtable_test.dir/build.make CMakeFiles/nvmtable_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=82,83 "Built target nvmtable_test"
-.PHONY : CMakeFiles/nvmtable_test.dir/all
-
-# Include target in all.
-all: CMakeFiles/nvmtable_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/nvmtable_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/nvmtable_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
-.PHONY : CMakeFiles/nvmtable_test.dir/rule
-
-# Convenience name for target.
-nvmtable_test: CMakeFiles/nvmtable_test.dir/rule
-
-.PHONY : nvmtable_test
-
-# clean rule for target.
-CMakeFiles/nvmtable_test.dir/clean:
-	$(MAKE) -f CMakeFiles/nvmtable_test.dir/build.make CMakeFiles/nvmtable_test.dir/clean
-.PHONY : CMakeFiles/nvmtable_test.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/nvmtable_test.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/chunktable_test.dir
-
-# All Build rule for target.
-CMakeFiles/chunktable_test.dir/all: CMakeFiles/leveldb.dir/all
-	$(MAKE) -f CMakeFiles/chunktable_test.dir/build.make CMakeFiles/chunktable_test.dir/depend
-	$(MAKE) -f CMakeFiles/chunktable_test.dir/build.make CMakeFiles/chunktable_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=13,14 "Built target chunktable_test"
-.PHONY : CMakeFiles/chunktable_test.dir/all
-
-# Include target in all.
-all: CMakeFiles/chunktable_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/chunktable_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/chunktable_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
-.PHONY : CMakeFiles/chunktable_test.dir/rule
-
-# Convenience name for target.
-chunktable_test: CMakeFiles/chunktable_test.dir/rule
-
-.PHONY : chunktable_test
-
-# clean rule for target.
-CMakeFiles/chunktable_test.dir/clean:
-	$(MAKE) -f CMakeFiles/chunktable_test.dir/build.make CMakeFiles/chunktable_test.dir/clean
-.PHONY : CMakeFiles/chunktable_test.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/chunktable_test.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/autocompact_test.dir
 
 # All Build rule for target.
 CMakeFiles/autocompact_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/autocompact_test.dir/build.make CMakeFiles/autocompact_test.dir/depend
 	$(MAKE) -f CMakeFiles/autocompact_test.dir/build.make CMakeFiles/autocompact_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=3,4 "Built target autocompact_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=1,2 "Built target autocompact_test"
 .PHONY : CMakeFiles/autocompact_test.dir/all
 
 # Include target in all.
@@ -446,7 +409,7 @@ all: CMakeFiles/autocompact_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/autocompact_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/autocompact_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/autocompact_test.dir/rule
@@ -473,7 +436,7 @@ clean: CMakeFiles/autocompact_test.dir/clean
 CMakeFiles/issue200_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/issue200_test.dir/build.make CMakeFiles/issue200_test.dir/depend
 	$(MAKE) -f CMakeFiles/issue200_test.dir/build.make CMakeFiles/issue200_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=43,44 "Built target issue200_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=42,43 "Built target issue200_test"
 .PHONY : CMakeFiles/issue200_test.dir/all
 
 # Include target in all.
@@ -483,7 +446,7 @@ all: CMakeFiles/issue200_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/issue200_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/issue200_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/issue200_test.dir/rule
@@ -510,7 +473,7 @@ clean: CMakeFiles/issue200_test.dir/clean
 CMakeFiles/db_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/db_test.dir/build.make CMakeFiles/db_test.dir/depend
 	$(MAKE) -f CMakeFiles/db_test.dir/build.make CMakeFiles/db_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=24,25 "Built target db_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=20,21,22 "Built target db_test"
 .PHONY : CMakeFiles/db_test.dir/all
 
 # Include target in all.
@@ -520,7 +483,7 @@ all: CMakeFiles/db_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/db_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 32
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/db_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/db_test.dir/rule
@@ -541,50 +504,13 @@ clean: CMakeFiles/db_test.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/nvmwrite_batch_test.dir
-
-# All Build rule for target.
-CMakeFiles/nvmwrite_batch_test.dir/all: CMakeFiles/leveldb.dir/all
-	$(MAKE) -f CMakeFiles/nvmwrite_batch_test.dir/build.make CMakeFiles/nvmwrite_batch_test.dir/depend
-	$(MAKE) -f CMakeFiles/nvmwrite_batch_test.dir/build.make CMakeFiles/nvmwrite_batch_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=84,85 "Built target nvmwrite_batch_test"
-.PHONY : CMakeFiles/nvmwrite_batch_test.dir/all
-
-# Include target in all.
-all: CMakeFiles/nvmwrite_batch_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/nvmwrite_batch_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/nvmwrite_batch_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
-.PHONY : CMakeFiles/nvmwrite_batch_test.dir/rule
-
-# Convenience name for target.
-nvmwrite_batch_test: CMakeFiles/nvmwrite_batch_test.dir/rule
-
-.PHONY : nvmwrite_batch_test
-
-# clean rule for target.
-CMakeFiles/nvmwrite_batch_test.dir/clean:
-	$(MAKE) -f CMakeFiles/nvmwrite_batch_test.dir/build.make CMakeFiles/nvmwrite_batch_test.dir/clean
-.PHONY : CMakeFiles/nvmwrite_batch_test.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/nvmwrite_batch_test.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/no_destructor_test.dir
 
 # All Build rule for target.
 CMakeFiles/no_destructor_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/no_destructor_test.dir/build.make CMakeFiles/no_destructor_test.dir/depend
 	$(MAKE) -f CMakeFiles/no_destructor_test.dir/build.make CMakeFiles/no_destructor_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=79,80,81 "Built target no_destructor_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=84,85 "Built target no_destructor_test"
 .PHONY : CMakeFiles/no_destructor_test.dir/all
 
 # Include target in all.
@@ -594,7 +520,7 @@ all: CMakeFiles/no_destructor_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/no_destructor_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/no_destructor_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/no_destructor_test.dir/rule
@@ -615,87 +541,13 @@ clean: CMakeFiles/no_destructor_test.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/filter_block_test.dir
-
-# All Build rule for target.
-CMakeFiles/filter_block_test.dir/all: CMakeFiles/leveldb.dir/all
-	$(MAKE) -f CMakeFiles/filter_block_test.dir/build.make CMakeFiles/filter_block_test.dir/depend
-	$(MAKE) -f CMakeFiles/filter_block_test.dir/build.make CMakeFiles/filter_block_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=37,38 "Built target filter_block_test"
-.PHONY : CMakeFiles/filter_block_test.dir/all
-
-# Include target in all.
-all: CMakeFiles/filter_block_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/filter_block_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/filter_block_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
-.PHONY : CMakeFiles/filter_block_test.dir/rule
-
-# Convenience name for target.
-filter_block_test: CMakeFiles/filter_block_test.dir/rule
-
-.PHONY : filter_block_test
-
-# clean rule for target.
-CMakeFiles/filter_block_test.dir/clean:
-	$(MAKE) -f CMakeFiles/filter_block_test.dir/build.make CMakeFiles/filter_block_test.dir/clean
-.PHONY : CMakeFiles/filter_block_test.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/filter_block_test.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/corruption_test.dir
-
-# All Build rule for target.
-CMakeFiles/corruption_test.dir/all: CMakeFiles/leveldb.dir/all
-	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/depend
-	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=17,18 "Built target corruption_test"
-.PHONY : CMakeFiles/corruption_test.dir/all
-
-# Include target in all.
-all: CMakeFiles/corruption_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/corruption_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/corruption_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
-.PHONY : CMakeFiles/corruption_test.dir/rule
-
-# Convenience name for target.
-corruption_test: CMakeFiles/corruption_test.dir/rule
-
-.PHONY : corruption_test
-
-# clean rule for target.
-CMakeFiles/corruption_test.dir/clean:
-	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/clean
-.PHONY : CMakeFiles/corruption_test.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/corruption_test.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/status_test.dir
 
 # All Build rule for target.
 CMakeFiles/status_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/status_test.dir/build.make CMakeFiles/status_test.dir/depend
 	$(MAKE) -f CMakeFiles/status_test.dir/build.make CMakeFiles/status_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=90,91 "Built target status_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=89,90 "Built target status_test"
 .PHONY : CMakeFiles/status_test.dir/all
 
 # Include target in all.
@@ -705,7 +557,7 @@ all: CMakeFiles/status_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/status_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/status_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/status_test.dir/rule
@@ -732,7 +584,7 @@ clean: CMakeFiles/status_test.dir/clean
 CMakeFiles/env_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/env_test.dir/build.make CMakeFiles/env_test.dir/depend
 	$(MAKE) -f CMakeFiles/env_test.dir/build.make CMakeFiles/env_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=31,32 "Built target env_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=27,28,29 "Built target env_test"
 .PHONY : CMakeFiles/env_test.dir/all
 
 # Include target in all.
@@ -742,7 +594,7 @@ all: CMakeFiles/env_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/env_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 32
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/env_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/env_test.dir/rule
@@ -763,50 +615,13 @@ clean: CMakeFiles/env_test.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/chunklog_test.dir
-
-# All Build rule for target.
-CMakeFiles/chunklog_test.dir/all: CMakeFiles/leveldb.dir/all
-	$(MAKE) -f CMakeFiles/chunklog_test.dir/build.make CMakeFiles/chunklog_test.dir/depend
-	$(MAKE) -f CMakeFiles/chunklog_test.dir/build.make CMakeFiles/chunklog_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=11,12 "Built target chunklog_test"
-.PHONY : CMakeFiles/chunklog_test.dir/all
-
-# Include target in all.
-all: CMakeFiles/chunklog_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/chunklog_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/chunklog_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
-.PHONY : CMakeFiles/chunklog_test.dir/rule
-
-# Convenience name for target.
-chunklog_test: CMakeFiles/chunklog_test.dir/rule
-
-.PHONY : chunklog_test
-
-# clean rule for target.
-CMakeFiles/chunklog_test.dir/clean:
-	$(MAKE) -f CMakeFiles/chunklog_test.dir/build.make CMakeFiles/chunklog_test.dir/clean
-.PHONY : CMakeFiles/chunklog_test.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/chunklog_test.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/leveldb.dir
 
 # All Build rule for target.
 CMakeFiles/leveldb.dir/all:
 	$(MAKE) -f CMakeFiles/leveldb.dir/build.make CMakeFiles/leveldb.dir/depend
 	$(MAKE) -f CMakeFiles/leveldb.dir/build.make CMakeFiles/leveldb.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69 "Built target leveldb"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72 "Built target leveldb"
 .PHONY : CMakeFiles/leveldb.dir/all
 
 # Include target in all.
@@ -816,7 +631,7 @@ all: CMakeFiles/leveldb.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/leveldb.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/leveldb.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/leveldb.dir/rule
@@ -843,7 +658,7 @@ clean: CMakeFiles/leveldb.dir/clean
 CMakeFiles/c_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/c_test.dir/build.make CMakeFiles/c_test.dir/depend
 	$(MAKE) -f CMakeFiles/c_test.dir/build.make CMakeFiles/c_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=7,8 "Built target c_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=5,6,7 "Built target c_test"
 .PHONY : CMakeFiles/c_test.dir/all
 
 # Include target in all.
@@ -853,7 +668,7 @@ all: CMakeFiles/c_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/c_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 32
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/c_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/c_test.dir/rule
@@ -880,7 +695,7 @@ clean: CMakeFiles/c_test.dir/clean
 CMakeFiles/issue178_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/issue178_test.dir/build.make CMakeFiles/issue178_test.dir/depend
 	$(MAKE) -f CMakeFiles/issue178_test.dir/build.make CMakeFiles/issue178_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=41,42 "Built target issue178_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=39,40,41 "Built target issue178_test"
 .PHONY : CMakeFiles/issue178_test.dir/all
 
 # Include target in all.
@@ -890,7 +705,7 @@ all: CMakeFiles/issue178_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/issue178_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 32
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/issue178_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/issue178_test.dir/rule
@@ -917,7 +732,7 @@ clean: CMakeFiles/issue178_test.dir/clean
 CMakeFiles/leveldbutil.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/leveldbutil.dir/build.make CMakeFiles/leveldbutil.dir/depend
 	$(MAKE) -f CMakeFiles/leveldbutil.dir/build.make CMakeFiles/leveldbutil.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=70 "Built target leveldbutil"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=73 "Built target leveldbutil"
 .PHONY : CMakeFiles/leveldbutil.dir/all
 
 # Include target in all.
@@ -927,7 +742,7 @@ all: CMakeFiles/leveldbutil.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/leveldbutil.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/leveldbutil.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/leveldbutil.dir/rule
@@ -964,7 +779,7 @@ all: CMakeFiles/write_batch_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/write_batch_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 32
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/write_batch_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/write_batch_test.dir/rule
@@ -985,87 +800,13 @@ clean: CMakeFiles/write_batch_test.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/memenv_test.dir
-
-# All Build rule for target.
-CMakeFiles/memenv_test.dir/all: CMakeFiles/leveldb.dir/all
-	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/depend
-	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=75,76 "Built target memenv_test"
-.PHONY : CMakeFiles/memenv_test.dir/all
-
-# Include target in all.
-all: CMakeFiles/memenv_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/memenv_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/memenv_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
-.PHONY : CMakeFiles/memenv_test.dir/rule
-
-# Convenience name for target.
-memenv_test: CMakeFiles/memenv_test.dir/rule
-
-.PHONY : memenv_test
-
-# clean rule for target.
-CMakeFiles/memenv_test.dir/clean:
-	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/clean
-.PHONY : CMakeFiles/memenv_test.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/memenv_test.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/dbformat_test.dir
-
-# All Build rule for target.
-CMakeFiles/dbformat_test.dir/all: CMakeFiles/leveldb.dir/all
-	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/depend
-	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=26,27 "Built target dbformat_test"
-.PHONY : CMakeFiles/dbformat_test.dir/all
-
-# Include target in all.
-all: CMakeFiles/dbformat_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/dbformat_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/dbformat_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
-.PHONY : CMakeFiles/dbformat_test.dir/rule
-
-# Convenience name for target.
-dbformat_test: CMakeFiles/dbformat_test.dir/rule
-
-.PHONY : dbformat_test
-
-# clean rule for target.
-CMakeFiles/dbformat_test.dir/clean:
-	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/clean
-.PHONY : CMakeFiles/dbformat_test.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/dbformat_test.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/fault_injection_test.dir
 
 # All Build rule for target.
 CMakeFiles/fault_injection_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/fault_injection_test.dir/build.make CMakeFiles/fault_injection_test.dir/depend
 	$(MAKE) -f CMakeFiles/fault_injection_test.dir/build.make CMakeFiles/fault_injection_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=33,34 "Built target fault_injection_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=30,31 "Built target fault_injection_test"
 .PHONY : CMakeFiles/fault_injection_test.dir/all
 
 # Include target in all.
@@ -1075,7 +816,7 @@ all: CMakeFiles/fault_injection_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/fault_injection_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/fault_injection_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/fault_injection_test.dir/rule
@@ -1102,7 +843,7 @@ clean: CMakeFiles/fault_injection_test.dir/clean
 CMakeFiles/filename_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/filename_test.dir/build.make CMakeFiles/filename_test.dir/depend
 	$(MAKE) -f CMakeFiles/filename_test.dir/build.make CMakeFiles/filename_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=35,36 "Built target filename_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=32,33,34 "Built target filename_test"
 .PHONY : CMakeFiles/filename_test.dir/all
 
 # Include target in all.
@@ -1112,7 +853,7 @@ all: CMakeFiles/filename_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/filename_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 32
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/filename_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/filename_test.dir/rule
@@ -1133,13 +874,87 @@ clean: CMakeFiles/filename_test.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/dbformat_test.dir
+
+# All Build rule for target.
+CMakeFiles/dbformat_test.dir/all: CMakeFiles/leveldb.dir/all
+	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/depend
+	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=23,24 "Built target dbformat_test"
+.PHONY : CMakeFiles/dbformat_test.dir/all
+
+# Include target in all.
+all: CMakeFiles/dbformat_test.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/dbformat_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 31
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/dbformat_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
+.PHONY : CMakeFiles/dbformat_test.dir/rule
+
+# Convenience name for target.
+dbformat_test: CMakeFiles/dbformat_test.dir/rule
+
+.PHONY : dbformat_test
+
+# clean rule for target.
+CMakeFiles/dbformat_test.dir/clean:
+	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/clean
+.PHONY : CMakeFiles/dbformat_test.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/dbformat_test.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/memenv_test.dir
+
+# All Build rule for target.
+CMakeFiles/memenv_test.dir/all: CMakeFiles/leveldb.dir/all
+	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/depend
+	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=79,80 "Built target memenv_test"
+.PHONY : CMakeFiles/memenv_test.dir/all
+
+# Include target in all.
+all: CMakeFiles/memenv_test.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/memenv_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 31
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/memenv_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
+.PHONY : CMakeFiles/memenv_test.dir/rule
+
+# Convenience name for target.
+memenv_test: CMakeFiles/memenv_test.dir/rule
+
+.PHONY : memenv_test
+
+# clean rule for target.
+CMakeFiles/memenv_test.dir/clean:
+	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/clean
+.PHONY : CMakeFiles/memenv_test.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/memenv_test.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/table_test.dir
 
 # All Build rule for target.
 CMakeFiles/table_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/table_test.dir/build.make CMakeFiles/table_test.dir/depend
 	$(MAKE) -f CMakeFiles/table_test.dir/build.make CMakeFiles/table_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=92,93 "Built target table_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=91,92 "Built target table_test"
 .PHONY : CMakeFiles/table_test.dir/all
 
 # Include target in all.
@@ -1149,7 +964,7 @@ all: CMakeFiles/table_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/table_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/table_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/table_test.dir/rule
@@ -1176,7 +991,7 @@ clean: CMakeFiles/table_test.dir/clean
 CMakeFiles/log_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/depend
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=71,72 "Built target log_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=74,75,76 "Built target log_test"
 .PHONY : CMakeFiles/log_test.dir/all
 
 # Include target in all.
@@ -1186,7 +1001,7 @@ all: CMakeFiles/log_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/log_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 32
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/log_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/log_test.dir/rule
@@ -1213,7 +1028,7 @@ clean: CMakeFiles/log_test.dir/clean
 CMakeFiles/recovery_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/recovery_test.dir/build.make CMakeFiles/recovery_test.dir/depend
 	$(MAKE) -f CMakeFiles/recovery_test.dir/build.make CMakeFiles/recovery_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=86,87 "Built target recovery_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=86,87,88 "Built target recovery_test"
 .PHONY : CMakeFiles/recovery_test.dir/all
 
 # Include target in all.
@@ -1223,7 +1038,7 @@ all: CMakeFiles/recovery_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/recovery_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 32
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/recovery_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/recovery_test.dir/rule
@@ -1260,7 +1075,7 @@ all: CMakeFiles/version_set_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/version_set_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/version_set_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/version_set_test.dir/rule
@@ -1281,124 +1096,13 @@ clean: CMakeFiles/version_set_test.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/crc32c_test.dir
-
-# All Build rule for target.
-CMakeFiles/crc32c_test.dir/all: CMakeFiles/leveldb.dir/all
-	$(MAKE) -f CMakeFiles/crc32c_test.dir/build.make CMakeFiles/crc32c_test.dir/depend
-	$(MAKE) -f CMakeFiles/crc32c_test.dir/build.make CMakeFiles/crc32c_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=19,20,21 "Built target crc32c_test"
-.PHONY : CMakeFiles/crc32c_test.dir/all
-
-# Include target in all.
-all: CMakeFiles/crc32c_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/crc32c_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 28
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/crc32c_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
-.PHONY : CMakeFiles/crc32c_test.dir/rule
-
-# Convenience name for target.
-crc32c_test: CMakeFiles/crc32c_test.dir/rule
-
-.PHONY : crc32c_test
-
-# clean rule for target.
-CMakeFiles/crc32c_test.dir/clean:
-	$(MAKE) -f CMakeFiles/crc32c_test.dir/build.make CMakeFiles/crc32c_test.dir/clean
-.PHONY : CMakeFiles/crc32c_test.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/crc32c_test.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/cache_test.dir
-
-# All Build rule for target.
-CMakeFiles/cache_test.dir/all: CMakeFiles/leveldb.dir/all
-	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/depend
-	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=9,10 "Built target cache_test"
-.PHONY : CMakeFiles/cache_test.dir/all
-
-# Include target in all.
-all: CMakeFiles/cache_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/cache_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cache_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
-.PHONY : CMakeFiles/cache_test.dir/rule
-
-# Convenience name for target.
-cache_test: CMakeFiles/cache_test.dir/rule
-
-.PHONY : cache_test
-
-# clean rule for target.
-CMakeFiles/cache_test.dir/clean:
-	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/clean
-.PHONY : CMakeFiles/cache_test.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/cache_test.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/skiplist_test.dir
-
-# All Build rule for target.
-CMakeFiles/skiplist_test.dir/all: CMakeFiles/leveldb.dir/all
-	$(MAKE) -f CMakeFiles/skiplist_test.dir/build.make CMakeFiles/skiplist_test.dir/depend
-	$(MAKE) -f CMakeFiles/skiplist_test.dir/build.make CMakeFiles/skiplist_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=88,89 "Built target skiplist_test"
-.PHONY : CMakeFiles/skiplist_test.dir/all
-
-# Include target in all.
-all: CMakeFiles/skiplist_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/skiplist_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/skiplist_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
-.PHONY : CMakeFiles/skiplist_test.dir/rule
-
-# Convenience name for target.
-skiplist_test: CMakeFiles/skiplist_test.dir/rule
-
-.PHONY : skiplist_test
-
-# clean rule for target.
-CMakeFiles/skiplist_test.dir/clean:
-	$(MAKE) -f CMakeFiles/skiplist_test.dir/build.make CMakeFiles/skiplist_test.dir/clean
-.PHONY : CMakeFiles/skiplist_test.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/skiplist_test.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/version_edit_test.dir
 
 # All Build rule for target.
 CMakeFiles/version_edit_test.dir/all: CMakeFiles/leveldb.dir/all
 	$(MAKE) -f CMakeFiles/version_edit_test.dir/build.make CMakeFiles/version_edit_test.dir/depend
 	$(MAKE) -f CMakeFiles/version_edit_test.dir/build.make CMakeFiles/version_edit_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=94,95 "Built target version_edit_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=93,94,95 "Built target version_edit_test"
 .PHONY : CMakeFiles/version_edit_test.dir/all
 
 # Include target in all.
@@ -1408,7 +1112,7 @@ all: CMakeFiles/version_edit_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/version_edit_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 32
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/version_edit_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
 .PHONY : CMakeFiles/version_edit_test.dir/rule
@@ -1425,6 +1129,80 @@ CMakeFiles/version_edit_test.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/version_edit_test.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/corruption_test.dir
+
+# All Build rule for target.
+CMakeFiles/corruption_test.dir/all: CMakeFiles/leveldb.dir/all
+	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/depend
+	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=12,13,14 "Built target corruption_test"
+.PHONY : CMakeFiles/corruption_test.dir/all
+
+# Include target in all.
+all: CMakeFiles/corruption_test.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/corruption_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 32
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/corruption_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
+.PHONY : CMakeFiles/corruption_test.dir/rule
+
+# Convenience name for target.
+corruption_test: CMakeFiles/corruption_test.dir/rule
+
+.PHONY : corruption_test
+
+# clean rule for target.
+CMakeFiles/corruption_test.dir/clean:
+	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/clean
+.PHONY : CMakeFiles/corruption_test.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/corruption_test.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/filter_block_test.dir
+
+# All Build rule for target.
+CMakeFiles/filter_block_test.dir/all: CMakeFiles/leveldb.dir/all
+	$(MAKE) -f CMakeFiles/filter_block_test.dir/build.make CMakeFiles/filter_block_test.dir/depend
+	$(MAKE) -f CMakeFiles/filter_block_test.dir/build.make CMakeFiles/filter_block_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meggie/文档/hotnvmdb/build/CMakeFiles --progress-num=35,36 "Built target filter_block_test"
+.PHONY : CMakeFiles/filter_block_test.dir/all
+
+# Include target in all.
+all: CMakeFiles/filter_block_test.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/filter_block_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 31
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/filter_block_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meggie/文档/hotnvmdb/build/CMakeFiles 0
+.PHONY : CMakeFiles/filter_block_test.dir/rule
+
+# Convenience name for target.
+filter_block_test: CMakeFiles/filter_block_test.dir/rule
+
+.PHONY : filter_block_test
+
+# clean rule for target.
+CMakeFiles/filter_block_test.dir/clean:
+	$(MAKE) -f CMakeFiles/filter_block_test.dir/build.make CMakeFiles/filter_block_test.dir/clean
+.PHONY : CMakeFiles/filter_block_test.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/filter_block_test.dir/clean
 
 .PHONY : clean
 

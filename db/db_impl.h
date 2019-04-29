@@ -84,6 +84,7 @@ class DBImpl : public DB {
   struct Writer;
   /////////////meggie
   struct nvmcompact_struct;
+  struct movetable_struct;
   /////////////meggie
 
   Iterator* NewInternalIterator(const ReadOptions&,
@@ -214,7 +215,7 @@ class DBImpl : public DB {
   };
   CompactionStats stats_[config::kNumLevels] GUARDED_BY(mutex_);
   ////////////////////////meggie
-  Status MakeRoomForImmu(bool force)
+  Status MakeRoomForImmu()
       EXCLUSIVE_LOCKS_REQUIRED(mutex_);
 
   Status WriteNVMTableToLevel0(chunkTable* cktbl, 
@@ -223,8 +224,7 @@ class DBImpl : public DB {
           std::vector<FileMetaData>& result_meta_list);
       EXCLUSIVE_LOCKS_REQUIRED(mutex_);
 
-  Status RecoverChunkFile(std::vector<uint64_t>& chunkindex_files, 
-                        std::vector<uint64_t>& chunklog_files,
+  Status RecoverChunkFile(std::vector<uint64_t>& chunk_files, 
                         uint64_t chunkmeta_file);
       EXCLUSIVE_LOCKS_REQUIRED(mutex_);
   
@@ -237,8 +237,7 @@ class DBImpl : public DB {
   //int num_nvmtable_threads_;
   //bool allow_nvmtable_compaction_;
  
-  std::vector<uint64_t> chunk_index_files_;
-  std::vector<uint64_t> chunk_log_files_;
+  std::vector<uint64_t> chunk_files_;
 
   uint64_t chunk_meta_file_;
 
@@ -261,6 +260,8 @@ class DBImpl : public DB {
   void printChunkFileNumbers();
   virtual void PrintTimerAudit();
   void MovetoNVMTable();
+  static void AddToNVMTable(void* args);
+  void AddToEachChunkTable(int index, std::vector<const char*>& batches);
   ////////////////////////meggie
 
   // No copying allowed

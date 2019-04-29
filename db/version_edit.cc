@@ -35,11 +35,9 @@ void VersionEdit::Clear() {
   log_number_ = 0;
   prev_log_number_ = 0;
   //////////////////meggie
-  chunkindex_files_.resize(kNumChunkTable);
-  chunklog_files_.resize(kNumChunkTable);
+  chunk_files_.resize(kNumChunkTable);
   for(int i = 0; i < kNumChunkTable; i++){
-      chunkindex_files_[i] = 0;
-      chunklog_files_[i] = 0;
+      chunk_files_[i] = 0;
   } 
   has_updated_chunk_ = false;
   has_meta_number_ = false;
@@ -104,8 +102,7 @@ void VersionEdit::EncodeTo(std::string* dst) const {
   if(has_updated_chunk_){
       PutVarint32(dst, kUpdatedChunkNumber);
       for(int i = 0; i < kNumChunkTable; i++){
-        PutVarint64(dst, chunkindex_files_[i]);
-        PutVarint64(dst, chunklog_files_[i]);
+        PutVarint64(dst, chunk_files_[i]);
       }
   }
   if(has_meta_number_){
@@ -150,7 +147,7 @@ Status VersionEdit::DecodeFrom(const Slice& src) {
   Slice str;
   InternalKey key;
   ////////////meggie
-  uint64_t index_number, log_number;
+  uint64_t chunk_number;
   int count = 0;
   ////////////meggie
 
@@ -231,10 +228,8 @@ Status VersionEdit::DecodeFrom(const Slice& src) {
         has_updated_chunk_ = true;
         //DEBUG_T("in decodefrom\n ");
         for(int i = 0; i < kNumChunkTable; i++){
-            if(GetVarint64(&input, &index_number) && 
-                    GetVarint64(&input, &log_number)){
-                chunkindex_files_[i] = index_number;
-                chunklog_files_[i] = log_number;
+            if(GetVarint64(&input, &chunk_number)){
+                chunk_files_[i] = chunk_number;
                 count++;
             }
             //DEBUG_T("versionset, chunkindex_filenumber:%lu, chunkLogFilenumber:%lu\n",
@@ -326,9 +321,7 @@ std::string VersionEdit::DebugString() const {
       for(int i = 0; i < kNumChunkTable; i++){
           r.append("\n chunk files: ");
           r.append("%d, ", i);
-          AppendNumberTo(&r, chunkindex_files_[i]);
-          r.append(" ");
-          AppendNumberTo(&r, chunklog_files_[i]);
+          AppendNumberTo(&r, chunk_files_[i]);
       }
   }
   /////////////////meggie

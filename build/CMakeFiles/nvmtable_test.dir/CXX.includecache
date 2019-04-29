@@ -6,18 +6,6 @@
 
 #IncludeRegexTransform: 
 
-..//db/chunklog.h
-string
--
-stddef.h
--
-stdint.h
--
-port/port.h
-../db/port/port.h
-leveldb/slice.h
-../db/leveldb/slice.h
-
 ..//db/dbformat.h
 stdio.h
 -
@@ -48,23 +36,23 @@ leveldb/status.h
 port/port.h
 ../db/port/port.h
 
-..//db/nvm_skiplist.h
+..//db/memtable.h
 string
 -
-assert.h
--
-stdlib.h
--
-port/port.h
-../db/port/port.h
+leveldb/db.h
+../db/leveldb/db.h
+db/dbformat.h
+../db/db/dbformat.h
+db/skiplist.h
+../db/db/skiplist.h
 util/arena.h
 ../db/util/arena.h
-util/random.h
-../db/util/random.h
-port/cache_flush.h
-../db/port/cache_flush.h
-db/chunklog.h
-../db/db/chunklog.h
+util/BloomFilter.h
+../db/util/BloomFilter.h
+string
+-
+unordered_set
+-
 util/debug.h
 ../db/util/debug.h
 
@@ -81,10 +69,6 @@ leveldb/db.h
 ../db/leveldb/db.h
 db/dbformat.h
 ../db/db/dbformat.h
-db/nvm_skiplist.h
-../db/db/nvm_skiplist.h
-db/chunklog.h
-../db/db/chunklog.h
 util/arena.h
 ../db/util/arena.h
 port/port.h
@@ -93,6 +77,22 @@ util/hash.h
 ../db/util/hash.h
 table/merger.h
 ../db/table/merger.h
+db/memtable.h
+../db/db/memtable.h
+
+..//db/skiplist.h
+assert.h
+-
+stdlib.h
+-
+port/port.h
+../db/port/port.h
+util/arena.h
+../db/util/arena.h
+util/random.h
+../db/util/random.h
+port/cache_flush.h
+../db/port/cache_flush.h
 
 ..//port/atomic_pointer.h
 stdint.h
@@ -149,6 +149,14 @@ port/thread_annotations.h
 ..//port/thread_annotations.h
 
 ..//table/merger.h
+
+..//util/BloomFilter.h
+stdlib.h
+-
+vector
+-
+stdint.h
+-
 
 ..//util/arena.h
 vector

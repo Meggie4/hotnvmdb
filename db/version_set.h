@@ -224,16 +224,13 @@ class VersionSet {
   uint64_t PrevLogNumber() const { return prev_log_number_; }
   
   ///////////////////meggie
-  void GetChunkFiles(std::vector<uint64_t>& chunkindex_files,
-                        std::vector<uint64_t>& chunklog_files) const {
-      for(int i = 0; i < chunkindex_files_.size(); i++){
-          chunkindex_files[i] = chunkindex_files_[i];
-          chunklog_files[i] = chunklog_files_[i];
+  void GetChunkFiles(std::vector<uint64_t>& chunk_files) const {
+      for(int i = 0; i < chunk_files_.size(); i++){
+          chunk_files[i] = chunk_files_[i];
       }
   }
 
-  void AddChunkFiles(std::vector<uint64_t>* chunkindex_files, 
-        std::vector<uint64_t>* chunklog_files,
+  void AddChunkFiles(std::vector<uint64_t>* chunk_files, 
         uint64_t* chunkmeta_file);
   
   void PrintChunkFiles();
@@ -320,8 +317,7 @@ class VersionSet {
   uint64_t log_number_;
   uint64_t prev_log_number_;  // 0 or backing store for memtable being compacted
   ///////////meggie
-  std::vector<uint64_t> chunkindex_files_; 
-  std::vector<uint64_t> chunklog_files_;
+  std::vector<uint64_t> chunk_files_; 
   uint64_t chunkmeta_file_; 
   ///////////meggie
 

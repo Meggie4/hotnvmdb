@@ -32,6 +32,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/meggie/文档/hotnvmdb/table/table.cc" "/home/meggie/文档/hotnvmdb/build/CMakeFiles/leveldb.dir/table/table.cc.o"
   "/home/meggie/文档/hotnvmdb/table/table_builder.cc" "/home/meggie/文档/hotnvmdb/build/CMakeFiles/leveldb.dir/table/table_builder.cc.o"
   "/home/meggie/文档/hotnvmdb/table/two_level_iterator.cc" "/home/meggie/文档/hotnvmdb/build/CMakeFiles/leveldb.dir/table/two_level_iterator.cc.o"
+  "/home/meggie/文档/hotnvmdb/util/BloomFilter.cc" "/home/meggie/文档/hotnvmdb/build/CMakeFiles/leveldb.dir/util/BloomFilter.cc.o"
   "/home/meggie/文档/hotnvmdb/util/MurmurHash3.cc" "/home/meggie/文档/hotnvmdb/build/CMakeFiles/leveldb.dir/util/MurmurHash3.cc.o"
   "/home/meggie/文档/hotnvmdb/util/arena.cc" "/home/meggie/文档/hotnvmdb/build/CMakeFiles/leveldb.dir/util/arena.cc.o"
   "/home/meggie/文档/hotnvmdb/util/bloom.cc" "/home/meggie/文档/hotnvmdb/build/CMakeFiles/leveldb.dir/util/bloom.cc.o"
@@ -55,8 +56,10 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
+  "ENABLE_RECOVERY"
   "LEVELDB_COMPILE_LIBRARY"
   "LEVELDB_PLATFORM_POSIX=1"
+  "USE_OFFSETS"
   )
 
 # The include file search paths:
