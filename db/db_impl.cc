@@ -1768,7 +1768,7 @@ Status DBImpl::WriteNVMTableToLevel0(chunkTable* cktbl,
             builder->Add(key, iter->value());
             sst_num++;
             if(file_number_index < (num_reserved_files - 1) &&
-                    builder->FileSize() >= options_.write_buffer_size){
+                builder->FileSize() >= (options_.write_buffer_size * 4)){
                s = builder->Finish();
                meta.file_size = builder->FileSize();
                if(s.ok())

@@ -3,6 +3,8 @@
 cat /dev/null > $NOVELSMSRC/mylog.txt
 
 NUMTHREAD=1
+
+#for write
 #BENCHMARKS="customed99hot1k_100k,\
 #customed80hot1k_100k,\
 #customeduniform1k_100k,\
@@ -55,6 +57,11 @@ BENCHMARKS="customed12zip1k_3000k"
 #BENCHMARKS="customeduniform256_1000k"
 #BENCHMARKS="customeduniform256_5000k"
 #BENCHMARKS="customeduniform256_10000k"
+
+#for read, to load first
+#BENCHMARKS="loadzip1k_500k,readzip1k_500k"
+#BENCHMARKS="loadzip1k_1000k,readzip1k_500k"
+#BENCHMARKS="loadzip1k_1000k,readzip1k_500k"
 
 #NoveLSM specific parameters
 #NoveLSM uses memtable levels, always set to num_levels 2
