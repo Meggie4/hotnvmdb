@@ -669,8 +669,36 @@ class Benchmark {
         PrintStats("leveldb.stats");
       } else if (name == Slice("sstables")) {
         PrintStats("leveldb.sstables");
-      //////////hotspot
       ///////////////meggie 
+      ////for zipfian
+      ///for 1KB value
+      } else if(name == Slice("customedzip1k_1000k")) {
+        entries_per_batch_ = 1000;
+        fresh_db = true;
+        method = &Benchmark::Customedzip1k_1000k;
+      } else if(name == Slice("customedzip1k_2000k")) {
+        entries_per_batch_ = 1000;
+        fresh_db = true;
+        method = &Benchmark::Customedzip1k_2000k;
+      } else if(name == Slice("customedzip1k_3000k")) {
+        entries_per_batch_ = 1000;
+        fresh_db = true;
+        method = &Benchmark::Customedzip1k_3000k;
+      ////for zipfian1.2
+      ///for 1KB value
+      } else if(name == Slice("customed12zip1k_1000k")) {
+        entries_per_batch_ = 1000;
+        fresh_db = true;
+        method = &Benchmark::Customed12zip1k_1000k;
+      } else if(name == Slice("customed12zip1k_2000k")) {
+        entries_per_batch_ = 1000;
+        fresh_db = true;
+        method = &Benchmark::Customed12zip1k_2000k;
+      } else if(name == Slice("customed12zip1k_3000k")) {
+        entries_per_batch_ = 1000;
+        fresh_db = true;
+        method = &Benchmark::Customed12zip1k_3000k;
+      //////////hotspot
       ///////for 100K entries
       //////only write for 1KB value
       } else if(name == Slice("customed99hot1k_100k")) {
@@ -752,6 +780,19 @@ class Benchmark {
         entries_per_batch_ = 1000;
         fresh_db = true;
         method = &Benchmark::CustomedWorkloadUniform4k_1000k;
+      //////////for 256B
+      } else if(name == Slice("customeduniform256_1000k")) {
+        entries_per_batch_ = 1000;
+        fresh_db = true;
+        method = &Benchmark::CustomedWorkloadUniform256_1000k;
+      } else if(name == Slice("customeduniform256_5000k")) {
+        entries_per_batch_ = 1000;
+        fresh_db = true;
+        method = &Benchmark::CustomedWorkloadUniform256_5000k;
+      } else if(name == Slice("customeduniform256_10000k")) {
+        entries_per_batch_ = 1000;
+        fresh_db = true;
+        method = &Benchmark::CustomedWorkloadUniform256_10000k;
       //////////////meggie 
       }else {
         if (name != Slice()) {  // No error message for empty name
@@ -1153,6 +1194,35 @@ class Benchmark {
   }
 
   ////////////meggie
+  ////for zipfian 
+  //for 1KB value
+  void Customedzip1k_1000k(ThreadState* thread){
+      std::string fname = "/mnt/workloads/workloadzip/runwrite1k_1000k.txt"; 
+      CustomedWorkloadWrite(thread, fname);
+  }
+  void Customedzip1k_2000k(ThreadState* thread){
+      std::string fname = "/mnt/workloads/workloadzip/runwrite1k_2000k.txt"; 
+      CustomedWorkloadWrite(thread, fname);
+  }
+  void Customedzip1k_3000k(ThreadState* thread){
+      std::string fname = "/mnt/workloads/workloadzip/runwrite1k_3000k.txt"; 
+      CustomedWorkloadWrite(thread, fname);
+  }
+  ////for zipfian1.2
+  //for 1KB value
+  void Customed12zip1k_1000k(ThreadState* thread){
+      std::string fname = "/mnt/workloads/workloadzip1.2/runwrite1k_1000k.txt"; 
+      CustomedWorkloadWrite(thread, fname);
+  }
+  void Customed12zip1k_2000k(ThreadState* thread){
+      std::string fname = "/mnt/workloads/workloadzip1.2/runwrite1k_2000k.txt"; 
+      CustomedWorkloadWrite(thread, fname);
+  }
+  void Customed12zip1k_3000k(ThreadState* thread){
+      std::string fname = "/mnt/workloads/workloadzip1.2/runwrite1k_3000k.txt"; 
+      CustomedWorkloadWrite(thread, fname);
+  }
+  ///for hotspot
   ////////for 100K entries 
   /////only write
   //for 1k
@@ -1252,6 +1322,19 @@ class Benchmark {
 
   void CustomedWorkloadUniform4k_1000k(ThreadState* thread){
       std::string fname = "/mnt/workloads/workloaduniform/runwrite4k_1000k.txt"; 
+      CustomedWorkloadWrite(thread, fname);
+  }
+  //////////for 256B
+  void CustomedWorkloadUniform256_1000k(ThreadState* thread){
+      std::string fname = "/mnt/workloads/workloaduniform/runwrite256_1000k.txt"; 
+      CustomedWorkloadWrite(thread, fname);
+  }
+  void CustomedWorkloadUniform256_5000k(ThreadState* thread){
+      std::string fname = "/mnt/workloads/workloaduniform/runwrite256_5000k.txt"; 
+      CustomedWorkloadWrite(thread, fname);
+  }
+  void CustomedWorkloadUniform256_10000k(ThreadState* thread){
+      std::string fname = "/mnt/workloads/workloaduniform/runwrite256_10000k.txt"; 
       CustomedWorkloadWrite(thread, fname);
   }
 

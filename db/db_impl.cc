@@ -822,7 +822,6 @@ void DBImpl::BackgroundCompaction() {
     return;
   }
   
-  
   if(nvmtbl_ && nvmtbl_->NeedsCompaction(options_.chunk_size)){
     start_timer(MAKE_ROOM_FOR_IMMUTABLE);
     MakeRoomForImmu();
@@ -1606,7 +1605,6 @@ Status DBImpl::MakeRoomForImmu(){
     Status s;
     DEBUG_T("in MakeRoomForImmu, check\n");
     start_timer(CHECK_ADD_COMPACTION_LIST);
-    
     nvmtbl_->CheckAndAddToCompactionList(
                 to_compaction_list_,
                 options_.chunk_size);
@@ -1720,60 +1718,71 @@ Status DBImpl::WriteNVMTableToLevel0(chunkTable* cktbl,
     int file_number_index = 0;
     bool first_entry = true;
 
+    bool has_current_user_key = false;
+    size_t count = 0;
+    int drop_count = 0;
+    std::string current_user_key;
+    SequenceNumber last_sequence_for_key = kMaxSequenceNumber;
+
     start_timer(TOTAL_WRITE_NVMTABLE_TO_LEVEL0);
     Iterator* iter = cktbl->NewIterator();
     DEBUG_T("have get chunk Iterator\n");
     
     iter->SeekToFirst();
     
-    //DEBUG_T("test valid\n");
     if(iter->Valid()){
-        //DEBUG_T("is valid\n");
         for(; iter->Valid(); iter->Next()) {
             Slice key = iter->key();
             Slice user_key(key.data(), key.size() - 8);
-            /*//if(hot_bf_->CheckHot(user_key)){
-            if(hot_keys.find(user_key.ToString()) != hot_keys.end()){
-                //DEBUG_T("in WriteNVMTableToLevel0, user_key:%s is check hot\n",user_key.ToString().c_str());
-                hot_num++;
-                new_cktbl->Add(iter->GetNodeKey());
+            bool drop = false;
+            if(!has_current_user_key ||
+                  user_comparator()->Compare(user_key, 
+                      Slice(current_user_key)) != 0){
+              current_user_key.assign(user_key.data(), user_key.size());
+              has_current_user_key = true;
+              last_sequence_for_key = kMaxSequenceNumber;
             }
-            else{*/
-                if(!builder){
-                    meta.number = 
-                        reserved_file_numbers[file_number_index++];
-                    std::string fname = TableFileName(dbname_, meta.number); 
-                    s = env_->NewWritableFile(fname, &file);               
-                    if(!s.ok()){
-                        return s;
-                    }
-                    builder = new TableBuilder(options_, file);
-                    first_entry = true;
+            if(last_sequence_for_key < kMaxSequenceNumber){
+              drop = true;
+              drop_count++;
+            }
+            last_sequence_for_key =  DecodeFixed64(key.data() + key.size() - 8) >> 8;
+            if(drop)
+                continue;
+            if(!builder){
+                meta.number = 
+                    reserved_file_numbers[file_number_index++];
+                std::string fname = TableFileName(dbname_, meta.number); 
+                s = env_->NewWritableFile(fname, &file);               
+                if(!s.ok()){
+                    return s;
                 }
-                if(first_entry){
-                    meta.smallest.DecodeFrom(iter->key());
-                    first_entry = false;
-                }
-                meta.largest.DecodeFrom(key);
-                builder->Add(key, iter->value());
-                sst_num++;
-                if(file_number_index < (num_reserved_files - 1) &&
-                        builder->FileSize() >= options_.write_buffer_size){
-                   s = builder->Finish();
-                   meta.file_size = builder->FileSize();
-                   if(s.ok())
-                      s = file->Sync();
-                   if(s.ok())
-                       s = file->Close();
-                   if(s.ok())
-                        DEBUG_T("NVMTable compaction Generated table #%lu, %lu bytes\n",meta.number, meta.file_size);
-                   delete builder;
-                   builder = nullptr;
-                   delete file;
-                   file = nullptr;
-                   result_meta_list.push_back(meta); 
-                }
-            //}
+                builder = new TableBuilder(options_, file);
+                first_entry = true;
+            }
+            if(first_entry){
+                meta.smallest.DecodeFrom(iter->key());
+                first_entry = false;
+            }
+            meta.largest.DecodeFrom(key);
+            builder->Add(key, iter->value());
+            sst_num++;
+            if(file_number_index < (num_reserved_files - 1) &&
+                    builder->FileSize() >= options_.write_buffer_size){
+               s = builder->Finish();
+               meta.file_size = builder->FileSize();
+               if(s.ok())
+                  s = file->Sync();
+               if(s.ok())
+                   s = file->Close();
+               if(s.ok())
+                    DEBUG_T("NVMTable compaction Generated table #%lu, %lu bytes\n",meta.number, meta.file_size);
+               delete builder;
+               builder = nullptr;
+               delete file;
+               file = nullptr;
+               result_meta_list.push_back(meta); 
+            }
         }
 
         if(builder){
@@ -1886,7 +1895,8 @@ Status DBImpl::MakeRoomForWrite(bool force) {
       background_work_finished_signal_.Wait();
     }
     ///////////meggie
-    else if(nvmtbl_ && nvmtbl_->NeedsCompaction(options_.chunk_size)){
+    //else if(nvmtbl_ && nvmtbl_->NeedsCompaction(options_.chunk_size)){
+    else if(nvmtbl_ && !to_compaction_list_.empty()){
       Log(options_.info_log, "Current nvmtable need compaction; waiting...\n");
       background_work_finished_signal_.Wait();
     }
