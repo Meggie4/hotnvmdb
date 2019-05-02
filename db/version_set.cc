@@ -370,6 +370,13 @@ Status Version::Get(const ReadOptions& options,
       tmp.reserve(num_files);
       for (uint32_t i = 0; i < num_files; i++) {
         FileMetaData* f = files[i];
+        //////////meggie
+        if(f->hash != -1 && 
+                NVMTable::GetChunkTableIndex(k.user_key()) != f->hash){
+            DEBUG_T("avoid search a file\n");
+            continue;
+        }
+        //////////meggie
         if (ucmp->Compare(user_key, f->smallest.user_key()) >= 0 &&
             ucmp->Compare(user_key, f->largest.user_key()) <= 0) {
           tmp.push_back(f);

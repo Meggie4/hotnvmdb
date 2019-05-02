@@ -22,7 +22,17 @@ struct FileMetaData {
   InternalKey smallest;       // Smallest internal key served by table
   InternalKey largest;        // Largest internal key served by table
 
-  FileMetaData() : refs(0), allowed_seeks(1 << 30), file_size(0) { }
+  ////////meggie
+  int hash;
+  ////////meggie
+  FileMetaData() : 
+      refs(0), 
+      allowed_seeks(1 << 30), 
+      file_size(0) ,
+      ///////////meggie
+      hash(-1)
+      ///////////meggie
+      { }
 };
 
 class VersionEdit {
@@ -62,12 +72,19 @@ class VersionEdit {
   void AddFile(int level, uint64_t file,
                uint64_t file_size,
                const InternalKey& smallest,
-               const InternalKey& largest) {
+               const InternalKey& largest,
+               /////////////meggie
+               int hash = -1
+               /////////////meggie
+               ) {
     FileMetaData f;
     f.number = file;
     f.file_size = file_size;
     f.smallest = smallest;
     f.largest = largest;
+    ////////meggie
+    f.hash = hash;
+    ////////meggie
     new_files_.push_back(std::make_pair(level, f));
   }
 

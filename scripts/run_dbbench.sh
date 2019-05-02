@@ -2,7 +2,7 @@
 #set -x
 cat /dev/null > $NOVELSMSRC/mylog.txt
 
-NUMTHREAD=1
+NUMTHREAD=2
 
 #for write
 #BENCHMARKS="customed99hot1k_100k,\
@@ -51,17 +51,18 @@ NUMTHREAD=1
 #BENCHMARKS="customedzip1k_1000k"
 #BENCHMARKS="customedzip1k_2000k"
 #BENCHMARKS="customedzip1k_3000k"
-#BENCHMARKS="customed12zip1k_1000k"
+BENCHMARKS="customed12zip1k_1000k"
 #BENCHMARKS="customed12zip1k_2000k"
-BENCHMARKS="customed12zip1k_3000k"
-#BENCHMARKS="customeduniform256_1000k"
-#BENCHMARKS="customeduniform256_5000k"
-#BENCHMARKS="customeduniform256_10000k"
+#BENCHMARKS="customed12zip1k_3000k"
+#BENCHMARKS="customeduniform1k_2000k"
+#BENCHMARKS="customeduniform1k_3000k"
 
 #for read, to load first
 #BENCHMARKS="loadzip1k_500k,readzip1k_500k"
-#BENCHMARKS="loadzip1k_1000k,readzip1k_500k"
-#BENCHMARKS="loadzip1k_1000k,readzip1k_500k"
+#BENCHMARKS="loadzip1k_1000k,readzip1k_1000k"
+#BENCHMARKS="loadzip1k_2000k,readzip1k_2000k"
+#BENCHMARKS="loadzip1k_1000k"
+#BENCHMARKS="loadzip1k_2000k"
 
 #NoveLSM specific parameters
 #NoveLSM uses memtable levels, always set to num_levels 2

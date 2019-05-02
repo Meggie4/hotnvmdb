@@ -101,7 +101,7 @@ class NVMTable {
         void RecoverMetadata(std::map<int, chunkTable*> update_chunks, 
                 std::string metafile);
 
-        int GetChunkTableIndex(const Slice& key);
+        static int GetChunkTableIndex(const Slice& key);
         bool NeedsCompaction(size_t chunk_thresh);
         
         chunkTable* cktables_[kNumChunkTable];

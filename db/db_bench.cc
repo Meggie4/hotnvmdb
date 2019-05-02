@@ -253,12 +253,14 @@ class WorkloadGenerator{
         pos++;
     }
     
-    if(isValid(*type)){
+    if(isValid(*type) && (*type == 'i')){
         key = getData();
         value = getData();
         return Status::OK();
-    }
-    else 
+    }else if(isValid(*type) && (*type == 'r')){
+        key = getData();
+        return Status::OK();
+    }else
         return Status::IOError("type is unvalid\n");
   }
 
@@ -802,19 +804,15 @@ class Benchmark {
         entries_per_batch_ = 1000;
         fresh_db = true;
         method = &Benchmark::CustomedWorkloadUniform4k_1000k;
-      //////////for 256B
-      } else if(name == Slice("customeduniform256_1000k")) {
+      //////////for uniform 
+      } else if(name == Slice("customeduniform1k_2000k")) {
         entries_per_batch_ = 1000;
         fresh_db = true;
-        method = &Benchmark::CustomedWorkloadUniform256_1000k;
-      } else if(name == Slice("customeduniform256_5000k")) {
+        method = &Benchmark::CustomedWorkloadUniform1k_2000k;
+      } else if(name == Slice("customeduniform1k_3000k")) {
         entries_per_batch_ = 1000;
         fresh_db = true;
-        method = &Benchmark::CustomedWorkloadUniform256_5000k;
-      } else if(name == Slice("customeduniform256_10000k")) {
-        entries_per_batch_ = 1000;
-        fresh_db = true;
-        method = &Benchmark::CustomedWorkloadUniform256_10000k;
+        method = &Benchmark::CustomedWorkloadUniform1k_3000k;
       //////////////meggie 
       }else {
         if (name != Slice()) {  // No error message for empty name
@@ -1252,17 +1250,18 @@ class Benchmark {
       std::string key;
       std::string value;
       int found = 0;
+      int total = 0;
       ReadOptions options;
       std::string read_value;
       while(wlgnerator.getRequest(&type, key, value).ok()){
         if(db_->Get(options, key, &read_value).ok()) {
             found++;
         }
+        total++;
         thread->stats.FinishedSingleOp();
-        break;
       }
       char msg[100];
-      snprintf(msg, sizeof(msg), "(%d found)", found);
+      snprintf(msg, sizeof(msg), "(%d/%d found)", found, total);
       thread->stats.AddMessage(msg);
   } 
   
@@ -1397,17 +1396,13 @@ class Benchmark {
       std::string fname = "/mnt/workloads/workloaduniform/runwrite4k_1000k.txt"; 
       CustomedWorkloadWrite(thread, fname);
   }
-  //////////for 256B
-  void CustomedWorkloadUniform256_1000k(ThreadState* thread){
-      std::string fname = "/mnt/workloads/workloaduniform/runwrite256_1000k.txt"; 
+  //////////for uniform 
+  void CustomedWorkloadUniform1k_2000k(ThreadState* thread){
+      std::string fname = "/mnt/workloads/workloaduniform/runwrite1k_2000k.txt"; 
       CustomedWorkloadWrite(thread, fname);
   }
-  void CustomedWorkloadUniform256_5000k(ThreadState* thread){
-      std::string fname = "/mnt/workloads/workloaduniform/runwrite256_5000k.txt"; 
-      CustomedWorkloadWrite(thread, fname);
-  }
-  void CustomedWorkloadUniform256_10000k(ThreadState* thread){
-      std::string fname = "/mnt/workloads/workloaduniform/runwrite256_10000k.txt"; 
+  void CustomedWorkloadUniform1k_3000k(ThreadState* thread){
+      std::string fname = "/mnt/workloads/workloaduniform/runwrite1k_3000k.txt"; 
       CustomedWorkloadWrite(thread, fname);
   }
 
@@ -1421,22 +1416,26 @@ class Benchmark {
     std::string value;
     int batch_num = 0;
     while(wlgnerator.getRequest(&type, key, value).ok()){
-        if(batch_num < entries_per_batch_){
-            batch.Put(key, value);
-            batch_num++;
-        }
-        else{
+        batch.Put(key, value);
+        batch_num++;
+        if(batch_num >= entries_per_batch_){
             s = db_->Write(write_options_, &batch);
             if (!s.ok()) {
                 fprintf(stderr, "put error: %s\n", s.ToString().c_str());
                 exit(1);
             }
             batch.Clear();
-            batch.Put(key, value);
-            batch_num = 1;
+            batch_num = 0;
         }
         bytes += value.size() + key.size();
         thread->stats.FinishedSingleOp();
+    }
+    if(batch_num > 0){
+        s = db_->Write(write_options_, &batch);
+        if (!s.ok()) {
+            fprintf(stderr, "put error: %s\n", s.ToString().c_str());
+            exit(1);
+        }
     }
     //fprintf(stderr, "add bytes:%lu\n", bytes);
     thread->stats.AddBytes(bytes);

@@ -1679,8 +1679,9 @@ Status DBImpl::FinishNVMTableCompaction(nvmcompact_struct* nvmcompact,
               /*if(base != nullptr)
                  level = base->PickLevelForMemTableOutput(min_user_key,
                          max_user_key);*/
+              meta.hash = nvmcompact[i].index;
               edit.AddFile(level, meta.number, meta.file_size, 
-                      meta.smallest, meta.largest);
+                      meta.smallest, meta.largest, meta.hash);
             }
             pending_outputs_.erase(meta.number);
        }
